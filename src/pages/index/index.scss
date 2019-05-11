@@ -1,0 +1,332 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.top{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    height:400px;
+    .topBox{
+        position:absolute;
+        top:-100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background:rgba(255,255,255,1);
+        box-shadow:4px -2px 40px 0px rgba(155,150,143,0.34);
+        border-radius:10px;
+        padding-bottom:54px;
+    }
+    .topSelect{
+        display:flex;
+        padding:20px 0;
+        border-bottom:1px solid rgba(244,244,244,1);
+        .checkCabin{
+        margin:0 auto;
+        display:flex;
+        .cabinText{
+            @include font_color($font-color-theme2);
+            @include font-dpr($font28);
+        }
+        .checkBoxImg{
+            width:40px;
+            height:40px;
+            position:relative;
+            .checkBoxIcon{
+                position:absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                margin:auto;
+                width:30px;
+                height:30px;
+            }
+        }
+    }
+    }
+    .setOutCity{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        height: 80px;
+        width: 96%;
+        margin: 0 auto;
+        margin-top: 54px;
+        .cityText{
+            font-size:44px;
+            font-family:PingFangSC-Medium;
+            font-weight:bold;
+            color:rgba(30,31,33,1);
+            line-height:5px;
+            line-height: 80px;
+        }
+        .cityImg{
+            position: absolute;
+            width: 62px;
+            height: 62px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+.selectiveCabin{
+    height: 40px;
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:54px;
+    .cabinText{
+            flex-grow: 1;
+            font-size:32px;
+            // font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(200,200,200,1);
+            line-height:40px;
+        }
+    .cabinNumBox{
+        display: flex;
+        
+        .chengRenIcon{
+            width:16px;
+            height:34px;
+        }
+        .childIcon{
+            width:21px;
+            height:29px;
+        }
+        .yingErIcon{
+            width:19px;
+            height:25px;
+        }
+        .cabinNumber{
+            font-size:32px;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(50,50,50,1);
+            line-height:32px
+        }
+    }
+}
+
+.cabinMskContent{
+    width: 90%;
+    @include bg_color($background-color-theme0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 500px;
+    z-index: 260;
+    border-radius:10px;
+    .topTitle{
+        position:relative;
+        width:90%;
+        margin:0 auto;
+        padding:20px 0;
+        margin-bottom:20px;
+        .closeIcon{
+            width:30px;
+            height:30px;
+            position:absolute;
+            top:30px;
+            left:0;
+         }
+         .titleH2{
+             @include font_color($font-color-theme2);
+             @include font-dpr($font30);
+             font-weight:bold;
+             width:100%;
+             text-align:center;
+
+         }
+    }
+    
+    .btn{
+        margin-top:50px;
+    }
+}
+.btn{
+    width: 90%;
+    margin: 0 auto;
+    border:none;
+    background:none;
+    @include font_color($font-color-theme5);
+    @include font-dpr($font30);
+    line-height: 80px;
+    text-align: center;
+    flex-grow: 1;
+    box-shadow:-1px 4px 20px 0px rgba(255,163,2,0.39);
+    border-radius:10px;
+    @include btn_yellow();
+}
+.riLiMask{
+    width: 100%;
+    height:750px;
+    padding-top:100px;
+    @include bg_color($background-color-theme0);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 260;
+    .closeIcon{
+       width:30px;
+       height:30px;
+       position:absolute;
+       right:20px;
+       top:20px;
+}
+}
+.checkTime{
+    height: 40px;
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom:60px;
+    .checkTimeText{
+        font-size:32px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(200,200,200,1);
+        line-height:40px;
+    }
+}
+.box{
+    width:90%;
+    margin:0 auto;
+}
+// 公司信息模块
+.companyMsg{
+    width:92%;
+    margin:0 auto;
+    background:rgba(255,255,255,1);
+    box-shadow:4px -2px 40px 0px rgba(155,150,143,0.34);
+    border-radius:10px;
+    padding:20px 0;
+    margin-bottom:40px;
+    Text{
+        @include font_color($font-color-theme2);
+        @include font-dpr($font28);
+    }
+    .downMsg{
+        display:flex;
+        justify-content:space-between;
+        padding-top:20px;
+        .leftText{
+            display:flex;
+            flex-direction:column;
+        }
+    }
+}
+// 专属服务
+.vipService{
+    width:92%;
+    margin:0 auto;
+    padding-bottom:40px;
+    
+    .big_image_wrap{
+        width:90%;
+        .big_image{
+            width:100%;
+            height: 200px;
+        }
+    }
+}
+.vipTitle{
+    display:block;
+        @include font_color($font-color-theme2);
+        @include font-dpr($font42);
+        margin-bottom:40px;
+    }
+.recommend {
+      width: 100%;
+      .recommend-cell {
+        width: 100%;
+        margin-bottom: 50px;
+        .recommend-img-box {
+          width: 100%;
+          height: 350px;
+          position: relative;
+          border-radius: 1px;
+          overflow: hidden;
+          margin-bottom: 12px;
+          .recommend-img {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+          .act {
+            width: 102px;
+            height: 44px;
+            line-height: 44px;
+            position: absolute;
+            left: 0;
+            bottom: 33px;
+            border-radius: 0 22px 22px 0;
+            text-align: center;
+            @include font-dpr($font24);
+            color: $font-color-theme5;
+            background-image: linear-gradient(90deg, 
+              #3c85f6 0%, 
+              #9e8b7b 0%, 
+              #ff9000 0%, 
+              #ffbb00 100%), 
+            linear-gradient(
+              #aaaaaa, 
+              #aaaaaa);
+            background-blend-mode: normal, 
+              normal;
+          }
+        }
+        .recommend-title {
+          width: 100%;
+          height: 70px;
+          line-height: 70px;
+          @include font-dpr($font32);
+          color: $font-color-theme2;
+          padding: 0 20px;
+        } 
+        .recommend-desc {
+          width: 100%;
+          padding: 0 20px;
+          margin-bottom: 16px;
+          .spanT {
+            line-height: 32px;
+            font-size: 22px;
+            color: $font-color-theme4;
+            padding: 0 15px;
+            border-right: 1px solid $border-Color1;
+          }
+          .spanT:first-child {
+            padding-left: 0;
+          }  
+          .spanT:last-child {
+            border: none;
+          }
+        } 
+        .recommend-price {
+          width: 100%;
+          padding: 0 20px;
+          Text {
+            line-height: 36px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .price {
+            @include font-dpr($font36);
+            color: $font-color-theme2;
+            margin-right: 10px;
+          }  
+          .oldPice {
+            font-size: 22px;
+            color: $font-color-theme4;
+          }
+        }
+      }
+    }

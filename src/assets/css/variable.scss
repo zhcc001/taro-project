@@ -1,0 +1,87 @@
+//颜色定义规范
+$background-color-theme0: white;
+$background-color-theme: #FFB300;//小面积使用，用于特别需要强调按钮和ICON 如购买按钮、图片上的小标签信息等
+$background-color-theme1: #ffd400;//小面积使用，用于特别需要强调突出的文字/一些小的icon 主要适用于文字上面
+$background-color-theme2: #ffeec6;//小面积使用，用于选中的标签／主要适用于选中标签上面的文字
+$background-color-theme3: #fffcf5;//用于文案的背景 主要适用于文案的背景（机票页面的底部背景）
+$background-color-theme4: #f2a16d;//#f2a16d到#e7423e小面积使用，用于首页上一些icon的使用 签证首页icon的使用
+$background-color-theme5: #e7423e;//#f2a16d到#e7423e小面积使用，用于首页上一些icon的使用 签证首页icon的使用
+$background-color-theme6: #f7f7f7;//用于内容区域底部的颜色 主要用于标签为灰色/主要适用于区分同一页面的不同板块
+$background-color-theme7: #f5f5f5;//用于分割模块的底色／下划线
+$background-color-theme8: #cccccc;//用于内容区域底色 主要适用于按钮的至灰的底部／灰色的一些小 icon
+$background-color-theme9: #ffc240;//#ffc240至#fffdf6用于icon 的渐变
+$background-color-theme10: #fffdf6;//#ffc240至#fffdf6用于icon 的渐变
+$background-color-theme11: #D9D9D9;//边框
+$background-color-theme12: #FEF5DF;//提示背景
+
+
+//  字体颜色
+$font-color-theme : #ffb300;//价格／标签／需要突出的文案／选中的文案
+$font-color-theme1 : #ff5d51;//一些价格／红色的使用均用这个颜色 主要用于标签为灰色/主要适用于区分同一页面的不同板块
+$font-color-theme2 : #373737;//用于应用名称／标题／重要文字
+$font-color-theme3 : #5b5b5b;//用于普通段落信息、主要适用于按钮的至灰的底部／灰色的一些小 icon
+$font-color-theme4 : #9f9f9f;//用于辅助排版、次要文字信息
+$font-color-theme5 : #ffffff;
+$font-color-theme6 : #464646;
+$font-color-theme7 : #0B0B0B;
+$font-color-theme8 : #8F8F8F;
+$font-color-theme9 : #5D5D5D;
+$font-color-theme10 : #AAAAAA;
+$font-color-theme11 : #8D8D8D;
+ 
+ 
+//字体定义规范
+$font46: 46px;
+$font60: 60px;
+$font42: 42px;//最大字体 42PX 主要标签题的文字大小
+$font40: 40px;
+$font36: 36px;//超大字体 36PX 主要导航栏名称
+$font32: 32px;
+$font30: 30px;
+$font26: 26px;
+$font28: 28px;
+$font24: 24px;
+$font20: 20px;
+// 边框
+$border-Color:#f7f7f7;
+$border-Color1:#D9D9D9;
+$border-Color2:#ffb300;
+$border-Color3:#f5f5f5;
+$border-Color4:#E5E5E5;
+
+span,img,input,i,b,a,button,input{
+    display: block;
+    border:none;
+    background: none;
+    font-style: normal;
+    font-weight: normal;
+}
+.cabinMask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 200;
+    top:0;
+    left: 0;
+}
+.box{
+    width:90%;
+    margin:0 auto;
+}
+.topSteps{
+    padding: 20px 0;
+    .at-steps .at-steps__title{
+        font-size: 20px !important;
+    }
+    .at-steps__item--active .at-steps__circular {
+        background-color:$background-color-theme1 !important;
+    }
+    .at-steps__item--active .at-steps__title {
+        color: $background-color-theme1 !important;
+        font-size: 20px !important;
+    }
+}
+.flex{
+    display: flex;
+}

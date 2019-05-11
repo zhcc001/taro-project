@@ -1,0 +1,148 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+
+.is-has {
+  .list {
+    width: 100%;
+    .cell {
+      width: 100%;
+      padding: 20px 0;
+      background: #fff;
+      margin-top: 20px;
+      border-bottom:1px solid #F5F5F5;
+    }
+    .edit {
+      width: 84px;
+      position: relative;
+      .edit-icon {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }   
+    .del {
+      width: 88px;
+      position: relative;
+      .del-icon {
+        width: 32px;
+        height: 35px;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    .item-info {
+      flex: 1;
+      .top {
+        line-height: 32px;
+        font-size: $font32;
+        color: $font-color-theme2;
+        margin-bottom: 25px;
+      }
+      .bot {
+        line-height: 32px;
+        font-size: $font26;
+        color: $font-color-theme4;
+      }
+    }    
+  }   
+}
+.add-btn {
+  width: 80%;
+  height: 90px;
+  display: block;
+  line-height: 90px;
+  text-align: center;
+  background: linear-gradient(to right,#FFD400,#FFB300);
+  font-size: 30px;
+  color: $font-color-theme5;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 100px;
+  left: 0;right: 0;
+  margin: auto;
+}
+.dialog-box {
+    width: 88%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 600px;
+    border-radius: 10px;
+    padding: 20px 0;
+    background: #ffffff;
+    
+  .dialog-h1 {
+    font-size: 38px;
+    color: $font-color-theme2;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .dialog-title {
+    font-size: $font42;
+    color: $font-color-theme3;
+    padding: 100px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .dialog-form {
+    width: 94%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    input {
+      height: 90px;
+      border-radius: 10px;
+      border: solid 2px #d3d0d0;
+      line-height: 90px;
+      padding: 0 30px;
+      margin-top: 10px;
+      font-size: $font26;
+      color: $font-color-theme3;
+    }
+  }
+  img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 28px;
+  }
+  //btn
+  .dialog-btn {
+    width: 88%;
+    margin: 0 auto;
+    .submit-btn {
+      flex: 1;
+      height: 80px;
+      display: block;
+      line-height: 80px;
+      text-align: center;
+      background: linear-gradient(to right,#FFD400,#FFB300);
+      font-size: $font30;
+      color: $font-color-theme5;
+      border-radius: 10px;
+    } 
+    .cancel-btn {
+      flex: 1;
+      height: 80px;
+      display: block;
+      line-height: 80px;
+      text-align: center;
+      background: #fff;
+      border: solid 2px #bfbebe;
+      font-size: $font30;
+      color: $font-color-theme4;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+  }
+}

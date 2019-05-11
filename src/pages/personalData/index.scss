@@ -1,0 +1,47 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.personalData{
+    padding-top: 100px;
+}
+.msgContent{
+    width: 88%;
+    margin: 0 auto;
+    padding: 60px 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow:4px -2px 40px 0px rgba(155,150,143,0.34);
+    .companyName,.tel{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 36px;
+        color: #373737;
+        margin-bottom: 60px;
+        
+    }
+    Input{
+        width: 92%;
+        height: 90px;
+        margin: 0 auto;
+        border:1px solid #f5f5f5;
+        border-radius: 10px;
+        margin-bottom: 60px;
+        font-size:36px;
+        padding-left: 10px;
+        color: #373737;
+    }
+    Input::placeholder{
+        color: #8D8D8D;
+    }
+    .btn{
+        width: 90%;
+        margin: 0 auto;
+        height:80px;
+        background:linear-gradient(-65deg,rgba(255,211,0,1),rgba(255,179,0,1));
+        border-radius:10px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+        color: #ffffff;
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,270 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.topSteps{
+    padding: 20px 0;
+    .at-steps .at-steps__title{
+      font-size: 20px !important;
+  }
+    .at-steps__item--active .at-steps__circular {
+        background-color:$background-color-theme1 !important;
+    }
+    .at-steps__item--active .at-steps__title {
+        color: $background-color-theme1 !important;
+        font-size: 20px !important;
+    }
+}
+.infoModel{
+    width: 90%;
+    margin: 0 auto;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 3px 16px 0px rgba(176,176,176,022);
+    border-radius:10px;
+    .infoTitle{
+        height:70px;
+        background:rgba(255,217,121,1);
+        border-radius:10px 10px 0px 0px;
+        Text{
+            font-size:24px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(86,86,86,1);
+            line-height: 70px;
+            display: block;
+            padding-left: 20px;
+        }
+    }
+}
+.flex{
+    display: flex;
+}
+.plane-list {
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    .plane-cell {
+      width: 100%;
+      .top {
+        width: 100%;
+        .time {
+          width: 138px;
+          padding: 43px 0 27px 0;
+          font-size: $font36;
+          color: $font-color-theme2;
+          text-align: center;
+        }
+        .place {
+          width: calc(100% - 138px);
+          padding: 43px 0 27px 0;
+          font-size: $font36;
+          color: $font-color-theme2;
+          padding-left: 20px;
+        }
+      }
+      .mid {
+        width: 100%;
+        .times {
+          width: 138px;
+          padding: 25px 0 26px 0;
+          font-size: $font20;
+          color: $font-color-theme4;
+          text-align: center;
+        }
+        .desc {
+          width: calc(100% - 138px);
+          padding: 25px 0 26px 0;
+          font-size: 22px;
+          color: $font-color-theme2;
+          padding-left: 10px;
+          background-color: #fffcf5;
+          .desc-icon {
+            width: 28px;
+            height: 20px;
+            vertical-align: middle;
+          }
+          span {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          span.line {
+            color: #d5d5d5;
+          }
+        }
+      }
+      .bot {
+        width: 100%;
+        .time {
+          width: 138px;
+          padding: 30px 0 35px 0;
+          font-size: $font36;
+          color: $font-color-theme2;
+          text-align: center;
+        }
+        .place {
+          width: calc(100% - 138px);
+          padding: 30px 0 35px 0;
+          font-size: $font36;
+          color: $font-color-theme2;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+.cockpit-list {
+    width: 100%;
+    .cockpit-cell {
+      width: 90%;
+      box-shadow:0px 3px 16px 0px rgba(176,176,176,0.44);
+      border-radius:10px;
+      margin-bottom: 20px;
+      padding: 20px;
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      .cockpit-discount {
+        padding: 0 23px;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        font-size: $font20;
+        color: $font-color-theme1;
+        background: #ffe9e2;
+        border-radius: 10px;
+        border: 1px solid #ff5d51;
+        margin-bottom: 25px;
+      }
+      .cockpit-info {
+        width: 100%;
+        Text {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .cockpit-sym {
+          font-size: 22px;
+          color: $font-color-theme2;
+          line-height: 22px;
+          vertical-align: bottom;
+          margin-right: -5px;
+          margin-bottom: 5px;
+        }     
+        .cockpit-price {
+          font-size: $font42;
+          color: $font-color-theme2;
+        }     
+        .cockpit-label {
+          margin-left: 10px;
+          font-size:22px;
+          color: $font-color-theme;
+          padding: 0 10px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 6px;
+
+        }
+        .label1 {
+          background: #ffedba;
+          color: $font-color-theme;
+        } 
+        .label2 {
+          background: #ffe9e2;
+          color: $font-color-theme1;
+        }
+      }
+      .cockpit-desc {
+        width: 100%;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 22px;
+          font-size: $font20;
+          color: $font-color-theme3;
+      }
+      .booking-btn {
+        width: 100px;
+        overflow: hidden;
+        position: absolute;
+        right: 18px;
+        top: 40px;
+        background: #fff;
+        border-style: solid;
+        border: 2px solid #f98755;
+        border-radius: 10px;
+        .btn {
+          font-size: $font28;
+          color: $font-color-theme5;
+          line-height: 70px;
+          height: 70px;
+          text-align: center;
+          background: linear-gradient(-90deg, 
+            #f45c4b 0%, 
+            #f98755 100%), 
+          linear-gradient(
+            #ff0000, 
+            #ff0000);
+          background-blend-mode: normal, 
+            normal;
+        }
+        .remain-num {
+          font-size: $font20;
+          color: #f5684e;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+        }
+      }
+      .btn1 {
+        height: 110px;
+      }       
+      .btn2 {
+        height: 70px;
+      }
+    }
+  }
+  .allTicket{
+      padding-top: 20px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  .modelTitle{
+    display: flex;
+    width: 94%;
+    margin: 0 auto;
+    .line{
+        width:6px;
+        height:33px;
+        background:linear-gradient(129deg,rgba(243,135,83,1),rgba(251,91,79,1));
+        border-radius:3px;
+        margin-right: 14px;
+    }
+    Text{
+        font-size:32px;
+        font-family:PingFangSC-Medium;
+        font-weight:500;
+        color:rgba(89,89,89,1);
+        line-height:32px;
+    }
+  }
+  .ListTitle{
+      display: flex;
+      width: 94%;
+      margin: 0 auto;
+      padding: 30px 0;
+      .itemCabin{
+        height:44px;
+        background: #D8D8D8;
+        // background:linear-gradient(-90deg,rgba(255,147,0,1),rgba(255,198,0,1));
+        border-radius:6px;
+        padding: 0 26px;
+        margin-right: 20px;
+        Text{
+            display: block;
+            font-size:24px;
+            font-family:PingFangSC-Medium;
+            font-weight:500;
+            color:rgba(255,255,255,1);
+            line-height:44px;
+        }
+      }
+      .itemCabinOn{
+        background:linear-gradient(-90deg,rgba(255,147,0,1),rgba(255,198,0,1));
+      }
+  }

@@ -1,0 +1,109 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.systemName{
+    @include font_color($font-color-theme2);
+    @include font-dpr($font40);
+    padding-top:40px;
+    padding-bottom:10px;
+}
+.InvitationName{
+    @include font_color($font-color-theme11);
+    @include font-dpr($font30);
+}
+.formBox{
+    padding-top:100px;
+    .li{
+        display:flex;
+        border: 1px solid #efefef;
+        border-radius:10px;
+        margin-bottom:20px;
+        height:88px;
+        
+    }
+    .liBox{
+        display:flex;
+        .code{
+            margin-left:10px;
+            border: 1px solid #efefef;
+            border-radius:10px;
+            height:88px;
+            @include font_color($font-color-theme11);
+            @include font-dpr($font30);
+            line-height:88px;
+            flex-grow:1;
+            text-align:center;
+        }
+    }
+    .imgBox{
+        width:36px;
+        position:relative;
+        margin-left:20px;
+        margin-right:20px;
+
+        
+    }
+    .IconImg{
+           width:36px;
+           height:36px;
+           position:absolute;
+           top:0;
+           left:0;
+           right:0;
+           bottom:0;
+           margin:auto;
+        
+       }
+    Input::placeholder{
+        color:#dbdbdb;
+        @include font-dpr($font36);
+    }
+    Input{
+        @include font_color($font-color-theme2);
+        @include font-dpr($font36);
+        height:88px;
+        flex-grow:1;
+
+        
+    }
+}
+.xieYi{
+    display:flex;
+    padding:20px 0;
+    Image{
+        width:30px;
+        height:30px;
+        margin-right:20px;
+    }
+    Text{
+        @include font_color($font-color-theme2);
+        @include font-dpr($font36);
+    }
+}
+.btn{
+    padding: 0;
+    margin: 0;
+    border:none;
+    background-color: none;
+    display:block;
+    width:100%;
+    height:88px;
+    color:#949494;
+    @include font-dpr($font36);
+    background-color:#cccccc;
+    border-radius:10px;
+    margin-top:40px;
+    text-align:center;
+    line-height:88px;
+}
+.btnBg{
+    background-color: $background-color-theme;
+    color: #ffffff;
+}
+.goToBtn{
+    @include font_color($font-color-theme);
+    @include font-dpr($font36);
+    text-decoration: underline;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+}

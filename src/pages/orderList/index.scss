@@ -1,0 +1,163 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.topSteps{
+    padding: 20px 0;
+    .at-steps__item--active .at-steps__circular {
+        background-color:$background-color-theme1 !important;
+    }
+    .at-steps__item--active .at-steps__title {
+        color: $background-color-theme1 !important;
+    }
+}
+.ListTitle{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    border-bottom:1px solid #F5F5F5;
+    .itemCabin{
+      Text{
+          display: block;
+          font-size:24px;
+          font-family:PingFangSC-Medium;
+          font-weight:500;
+          color:rgba(255,255,255,1);
+          padding: 30px 0;
+          border-bottom:1px solid transparent;
+          color: #373737
+      }
+    }
+    .itemCabinOn{
+        Text{
+            border-bottom:1px solid #FFB924;
+            color: #FFB924;
+        }
+        
+    }
+}
+
+.OrderList{
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .OrderList .OrderList_item{
+    box-shadow: 0px 4px 4px 0px rgba(188,188,188,0.32);
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .Number-Condition{
+    display: flex;
+    // justify-content: space-around;
+    height: 76px;
+    background: #fff;
+    font-size: 22px;
+    // text-align: center;
+    line-height: 76px;
+    padding: 0 21px;
+    box-sizing: border-box;
+    border-radius: 9px 9px 0 0;
+  }
+  .Number-Condition .number{
+     flex-grow: 21;
+     color: #818181;
+  }
+  .Number-Condition .condition{
+    flex-grow: 1;
+    color: $font-color-theme1;
+  }
+  .OrderMessage{
+    background: $background-color-theme7;
+    position: relative;
+    padding: 46px 24px 24px 24px;
+  }
+  .OrderMessage .smallmask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 76px;
+    background: $background-color-theme;
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 0 0 11px 0;
+  }
+  .OrderMessage .planePlace{
+    font-size: 24px;
+    color: #3a3a3a;
+    height: 48px;
+  }
+  .OrderMessage .planePlace .place{
+    margin-right: 16px;
+  }
+  .OrderMessage .planePlace .arrow{
+    width: 40px;
+    height: 10px;
+    margin: 10px 26px 0 26px;
+  }
+  .startData{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 44px;
+    line-height: 42px;
+    font-size: 22px;
+    color: #777777;
+  }
+  .startData .publicOrder_Date{
+    width: 28px;
+    height: 26px;
+    margin-right: 16px;
+    margin-top: 10px;
+    // vertical-align: middle;
+  }
+  .plane{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 22px;
+    color: #777777;
+    // height: .44px;
+  }
+  .plane .plane_img{
+    width: 36px;
+    height: 28px;
+    margin-right: 14px;
+    vertical-align: middle;
+  }  
+  .plane .plane_desc{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+  }
+
+  .Btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 16px 0 0;
+    margin-right: 20px;
+  }
+  
+  .Btn .payOrder{
+    border: 1px solid #feb0a6;
+    color: $font-color-theme1;
+    font-size: 24px;
+    width: 152px;
+    height: 52px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 8px;
+  }
+  .Btn .OneMoreOrder{
+    border: 1px solid #cfcfcf;
+    color: #9f9f9f;
+    margin-left: 16px;
+    width: 152px;
+    height: 52px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 8px;
+  }

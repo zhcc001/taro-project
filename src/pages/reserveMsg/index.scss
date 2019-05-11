@@ -1,0 +1,392 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.topSteps{
+  padding: 20px 0;
+  .at-steps .at-steps__title{
+      font-size: 20px !important;
+  }
+  .at-steps__item--active .at-steps__circular {
+      background-color:$background-color-theme1 !important;
+  }
+  .at-steps__item--active .at-steps__title {
+      color: $background-color-theme1 !important;
+      font-size: 20px !important;
+  }
+}
+.ticketInfo{
+  .at-modal__container{
+    width: 88%;
+  }
+}
+.content{
+  padding-bottom: 180px;
+  .at-textarea{
+    margin: 0 auto;
+    border:1px solid #D9D9D9;
+  }
+}
+.order-msg{
+  width: 94%;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  margin-bottom: 22px;
+  box-shadow:0px 1px 7px 0px rgba(170,170,170,0.36);
+  border-radius: 10px;
+  .bgImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+   .orderMsgUp{
+     padding-top: 32px;
+     display: flex;
+     width: 97%;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     .leftBiaoQian{
+       padding: 0 16px;
+       height: 46px;
+       line-height: 46px;
+       border-radius:0px 18px 18px 0px;
+       @include btn_yellow();
+       @include font-dpr($font20);
+       @include font_color($font-color-theme5);
+       margin-right: 20px;
+       display: flex;
+     }
+     .midMsg{
+       flex-grow: 1;
+       .timeBiao{
+         @include font-dpr($font28);
+         @include font_color($font-color-theme2);
+         font-weight: bold;
+         margin-bottom: 15px;
+         display: block;
+       }
+       .cityBiao{
+         display: flex;
+         Text{
+           @include font-dpr($font28);
+           @include font_color($font-color-theme2);
+         }
+         Image{
+           display: block;
+           width: 22px;
+           height: 8px;
+           margin: 0 10px;
+           margin-top: 8px;
+         }
+       }
+     }
+     .jianTou{
+       position: relative;
+       width: 20px;
+       margin-right: 18px;
+       Image{
+         position: absolute;
+         top:0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin: auto;
+         width: 18px;
+         height: 32px;
+       }
+     }
+     
+  }
+   .orderMsgDown{
+     padding-top: 20px;
+     display: flex;
+     width: 94%;
+     margin: 0 auto;
+     border-top:1px dashed rgba(242,242,242,1);
+     .TextSpan{
+       display: block;
+       width: 66px;
+       height: 34px;
+       @include bg_color(#FFE9E2);
+       @include font-dpr($font20);
+       @include font_color($font-color-theme1);
+       border:2px solid $font-color-theme1;
+       border-radius:4px;
+       text-align: center;
+       line-height: 34px;
+
+     }
+     .rightText{
+       .textMore{
+         display: flex;
+         margin-left: 24px;
+         padding-bottom: 22px;
+         .TextPrice{
+           @include font-dpr($font36);
+           @include font_color($font-color-theme1);
+           font-weight: bold;
+           margin-right: 20px;
+         }
+         .spanPrice{
+           @include font-dpr($font20);
+           @include font_color($font-color-theme2);
+           text-decoration:line-through;
+           margin-right:28px;
+         }
+         .tipsP{
+           @include font-dpr($font20);
+           @include font_color($font-color-theme11);
+         }
+       }
+       .tipsP1{
+         @include font-dpr($font20);
+         @include font_color($font-color-theme2);
+         padding-left: 24px;
+       }
+     }
+     
+   }
+}
+.tableModel{
+  .at-tabs__item--active {
+    color:$background-color-theme1 !important;
+    .at-tabs__item-underline{
+      background-color:$background-color-theme1 !important;
+
+    }
+
+  }
+  .tableItem{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    .usualpassenger{
+      width: 100%;
+      .title{
+        position: relative;
+        width:100%;
+        padding: 24px 0 0 40px;
+        height: 70px;
+        .line{
+          position: absolute;
+          top: 20px;
+          left: 18px;
+          width: 6px;
+          height:26pxpx;
+          background: #fed000;
+          border-radius: 6px;
+        }
+        .font{
+          color: #615d5c;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .add-passenger{
+          position: absolute;
+          top: 24px;
+          right: 22px;
+          width: 34px;
+          height: 34px;
+        }
+      }
+      .usualUl{
+        width: 100%;
+        .msg{
+          position: relative;
+          padding-bottom: 22px;
+          border-bottom: 2px solid $border-Color1;
+          margin-bottom: 20px;
+          .name,.picker{
+            color: #323232;
+            font-size: 28px;
+            line-height: 42px;
+          }
+          .card{
+            font-size: 20px;
+            color: #878787;
+          }
+          Image{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 28px;
+            right: 22px;
+          }
+        }
+        .addView{
+          display: flex;
+          justify-content: flex-end;
+          .addBox{
+            display: flex;
+            Image{
+              width: 34px;
+              height: 34px;
+              margin-right: 10px;
+            }
+            Text{
+              color: #615d5c;
+              font-size: 24px;
+            }
+          }
+        }
+         // 选择支付方式
+    .select-payment{
+      width: 96%;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 1px 12px 0px  rgba(188, 188, 188, 0.1);
+      margin-bottom: 24px;
+
+      .payTitle{
+         font-size: 28px;
+        color: #615d5c;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+      .btn{
+        padding-bottom: 26px;
+        .buttonText{
+          padding: 0 20px;
+          height: 58px;
+          font-size: 24px;
+          text-align: center;
+          line-height: 56px;
+          border-radius: 30px;
+          margin-right: 18px;
+          color: #d7d7d7;
+          border: 1px solid #d7d7d7;
+          background: #f7f7f7;
+        }
+        .isSelect {
+          color: #fd5f53 !important;
+          border:1px solid #fd5f53;
+          background: #ffe9e3;
+        }
+      }
+    }
+      }
+    }
+  }
+}
+
+.total{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 122px;
+  background: #fff;
+ //  padding: 50px 0 0 26px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  box-shadow:0px 1px 7px 0px rgba(170,170,170,0.36);
+  .msg{
+    padding: 50px 0 0 26px;
+    .font{
+      font-size: 20px;
+      color: #626262;
+    }
+    .totalprice{
+      font-size: 38px;
+      color: #ff5f4f;
+      font-weight: bold;
+    }
+    .peoplenum{
+      font-size: 28px;
+    }
+  }
+  .sureBtn{
+      margin-left: 28%;
+      margin-top: 20px;
+      width: 30%;
+      height: 86px;
+      text-align: center;
+      line-height: 86px;
+      color: #fff;
+      font-size: 26px;
+      background: linear-gradient(to right,#fec901,#ffa901);
+      border-radius: 10px;
+      margin-right: 26px;
+    }
+}
+
+.orderMsgMask{
+  background: #ffffff;
+  height:600px;
+  .orderMsgMaskTitle{
+    width: 90%;
+    margin: 0 auto;
+    padding: 28px 0;
+    Image{
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin-top: 10px;
+    }
+    
+  }
+  .select-shipping {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+    .hangBanMsg{
+      margin-bottom: 30px;
+      .biaoTi{
+        display: flex;
+        margin-bottom: 22px;
+        Text{
+          @include font-dpr($font24);
+          @include font_color($font-color-theme4);
+          margin-right: 10px;
+        }
+        span{
+          display: block;
+          flex-grow: 1;
+          height: 2px;
+          @include bg_color($border-Color3);
+          margin-top: 10px;
+        }
+      }
+      .neiRong{
+        .textB{
+          @include font-dpr($font26);
+          @include font_color($font-color-theme3);
+          margin-bottom: 10px;
+          display: block;
+        }
+        .textP{
+          @include font-dpr($font24);
+          @include font_color($font-color-theme2);
+          margin-bottom: 10px;
+        }
+        .textSpan{
+          @include font-dpr($font26);
+          @include font_color($font-color-theme2);
+        }
+      }
+    }
+    //btn
+    
+  }
+  .add-btn {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    line-height: 80px;
+    text-align: center;
+    background: linear-gradient(to right,#FFD400,#FFB300);
+    font-size: $font30;
+    color: $font-color-theme5;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

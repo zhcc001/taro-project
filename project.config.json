@@ -1,0 +1,47 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "myApp",
+	"description": "测试",
+	"appid": "wx8b4e46ecc80e3c4e",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "二维码进入注册",
+					"pathName": "pages/register/index",
+					"query": "VendorId=80000&companyName=黑龙江商旅",
+					"scene": 1011
+				}
+			]
+		}
+	}
+}
