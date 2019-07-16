@@ -1,0 +1,1732 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+
+.hiddenScroll {
+  height: 100vh;
+  overflow:hidden;
+}
+.topSteps{
+  padding: 20px 0;
+  .at-steps .at-steps__title{
+      font-size: 20px !important;
+  }
+  .at-steps__item--active .at-steps__circular {
+      background-color:$background-color-theme1 !important;
+  }
+  .at-steps__item--active .at-steps__title {
+      color: $background-color-theme1 !important;
+      font-size: 20px !important;
+  }
+}
+.closeIcon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  z-index: 550;
+}
+.ticketInfo{
+  .at-modal__container{
+    width: 88%;
+  }
+}
+.content{
+  padding-bottom: 180px;
+  .at-textarea{
+    margin: 0 auto;
+    border:1px solid #D9D9D9;
+  }
+}
+.order-msg{
+  width: 94%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 22px;
+  box-shadow:0px 1px 7px 0px rgba(170,170,170,0.36);
+  border-radius: 10px;
+  padding-bottom: 30px;
+  .bgImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+   .orderMsgUp{
+     padding-top: 32px;
+     display: flex;
+    //  width: 97%;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     .leftBiaoQian{
+       padding: 0 16px;
+       height: 46px;
+       line-height: 46px;
+       border-radius:0px 18px 18px 0px;
+       @include btn_yellow();
+       @include font-dpr($font20);
+       @include font_color($font-color-theme5);
+       margin-right: 20px;
+       display: flex;
+     }
+     .midMsg{
+       flex-grow: 1;
+       .timeBiao{
+         @include font-dpr($font28);
+         @include font_color($font-color-theme2);
+         font-weight: bold;
+         margin-bottom: 15px;
+         display: block;
+       }
+       .cityBiao{
+         display: flex;
+         Text{
+           @include font-dpr($font28);
+           @include font_color($font-color-theme2);
+         }
+         Image{
+           display: block;
+           width: 22px;
+           height: 8px;
+           margin: 0 10px;
+           margin-top: 14px;
+         }
+       }
+       .cityBiaoText{
+        @include font-dpr($font24);
+        @include font_color($font-color-theme2);
+       }
+     }
+     .jianTou{
+       position: relative;
+       width: 20px;
+       margin-right: 18px;
+       Image{
+         position: absolute;
+         top:0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin: auto;
+         width: 18px;
+         height: 32px;
+       }
+     }
+     
+  }
+   .orderMsgDown{
+     padding-top: 20px;
+     display: flex;
+     width: 94%;
+     margin: 0 auto;
+     border-top:1px dashed rgba(242,242,242,1);
+     .TextSpan{
+       display: block;
+       width: 66px;
+       height: 34px;
+       @include bg_color(#FFE9E2);
+       @include font-dpr($font20);
+       @include font_color($font-color-theme1);
+       border:2px solid $font-color-theme1;
+       border-radius:4px;
+       text-align: center;
+       line-height: 34px;
+      margin-top: 10px;
+     }
+     .rightText{
+       .textMore{
+         display: flex;
+         margin-left: 24px;
+         padding-bottom: 12px;
+         .TextPrice{
+           @include font-dpr($font36);
+           @include font_color($font-color-theme1);
+           font-weight: bold;
+           margin-right: 20px;
+         }
+         .spanPrice{
+           @include font-dpr($font20);
+           @include font_color($font-color-theme2);
+           margin-right:28px;
+           padding-top: 10px;
+         }
+         .tipsP{
+           @include font-dpr($font20);
+           @include font_color($font-color-theme11);
+         }
+       }
+       .tipsP1{
+         @include font-dpr($font20);
+         @include font_color($font-color-theme2);
+         padding-left: 24px;
+       }
+     }
+     
+   }
+}
+.tableModel{
+  .at-tabs__item--active {
+    color:$background-color-theme1 !important;
+    .at-tabs__item-underline{
+      background-color:$background-color-theme1 !important;
+
+    }
+    .at-tabs {
+      padding-bottom: 40px;
+    }
+  }
+  .tableItem{
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 30px;
+    
+    .usualpassenger{
+      width: 100%;
+      .title{
+        position: relative;
+        width:100%;
+        padding: 24px 0 0 40px;
+        height: 70px;
+        .line{
+          position: absolute;
+          top: 20px;
+          left: 18px;
+          width: 6px;
+          height:26pxpx;
+          background: #fed000;
+          border-radius: 6px;
+        }
+        .font{
+          color: #615d5c;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .add-passenger{
+          position: absolute;
+          top: 24px;
+          right: 22px;
+          width: 34px;
+          height: 34px;
+        }
+      }
+      .usualUl{
+        width: 100%;
+        
+        .msg{
+          position: relative;
+          padding-bottom: 22px;
+          border-bottom: 2px solid $border-Color1;
+          margin-bottom: 20px;
+          .name,.picker{
+            color: #323232;
+            font-size: 28px;
+            line-height: 42px;
+          }
+          .pickerBox{
+            display: flex;
+          }
+          .jisnTouBox{
+            border: 1px solid $border-Color1;
+            padding: 4px 4px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 6px;
+            width: 50%;
+            .xiaJiantou{
+              width: 40px;
+              height: 40px;
+              margin-top: 2px;
+            }
+          }
+          .card{
+            font-size: 24px;
+            color: #878787;
+          }
+          .delIcon{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 28px;
+            right: 22px;
+          }
+        }
+
+        .addView{
+          display: flex;
+          justify-content: flex-end;
+          .addBox{
+            display: flex;
+            Image{
+              width: 34px;
+              height: 34px;
+              margin-right: 10px;
+            }
+            Text{
+              color: #615d5c;
+              font-size: 24px;
+            }
+          }
+        }
+         // 选择支付方式
+    .select-payment{
+      width: 96%;
+      margin: 0 auto;
+      background: #fff;
+      margin-bottom: 24px;
+
+      .payTitle{
+         font-size: 28px;
+        color: #615d5c;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+      .btn{
+        padding-bottom: 26px;
+        .buttonText{
+          padding: 10px 20px;
+          height: 58px;
+          font-size: 24px;
+          text-align: center;
+          line-height: 56px;
+          border-radius: 30px;
+          margin-right: 18px;
+          color: #d7d7d7;
+          border: 1px solid #d7d7d7;
+          background: #f7f7f7;
+        }
+        .isSelect {
+          color: #fd5f53 !important;
+          border:1px solid #fd5f53;
+          background: #ffe9e3;
+        }
+      }
+    }
+      }
+    }
+  }
+}
+
+
+
+.orderMsgMask{
+  background: #ffffff;
+  height:800px;
+  z-index: 1000;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  border-radius: 10px;
+  z-index: 1001;
+  .orderMsgMaskTitle{
+    margin: 0 auto;
+    padding: 28px 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px 10px 0 0;
+    Image{
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin-top: 10px;
+    }
+    
+  }
+  .select-shipping {
+    width: 90%;
+    padding:30px 0 100px 0;
+    max-height: 40vh;
+    margin: 0 auto;
+    overflow-y: scroll;
+    .hangBanMsg{
+      margin-bottom: 30px;
+      .biaoTi{
+        display: flex;
+        // margin-bottom: 22px;
+        Text{
+          @include font-dpr($font24);
+          @include font_color($font-color-theme4);
+          margin-right: 10px;
+        }
+        span{
+          display: block;
+          flex-grow: 1;
+          height: 2px;
+          @include bg_color($border-Color3);
+          margin-top: 10px;
+        }
+      }
+      .neiRong{
+        .textB{
+          @include font-dpr($font26);
+          @include font_color($font-color-theme3);
+          margin-bottom: 10px;
+          display: block;
+        }
+        .textP{
+          @include font-dpr($font24);
+          @include font_color($font-color-theme2);
+          margin-bottom: 10px;
+        }
+        .textSpan{
+          @include font-dpr($font26);
+          @include font_color($font-color-theme2);
+          Text {
+            @include font-dpr($font26);
+            @include font_color($font-color-theme2);
+          }
+        }
+      }
+    }
+    //btn
+    
+  }
+  .btn-Box{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .add-btn,.cancel-Btn {
+    padding: 0 100px;
+    height: 80px;
+    display: block;
+    line-height: 80px;
+    text-align: center;
+    font-size: $font30;
+    color: $font-color-theme5;
+    border-radius: 10px;
+    border:1px solid transparent;
+  }
+  .add-btn{
+    background: linear-gradient(to right,#FFD400,#FFB300);
+  }
+  .cancel-Btn{
+    background:#F7F7F7;
+    color: #909090;
+  }
+}
+.tableItem .at-textarea__textarea{
+  position: inherit !important;
+  
+}
+.totalprice{
+  font-size: 38px;
+  color: #ff5f4f;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.cockpit-label {
+  margin-left: 10px;
+  font-size:22px;
+  color: $font-color-theme;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 6px;
+
+}
+.label1 {
+  background: #ffedba;
+  color: $font-color-theme;
+} 
+
+.topSelect {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(244, 244, 244, 1);
+
+  .checkCabin {
+    margin: 0 auto;
+    display: flex;
+
+    .cabinText {
+      @include font_color($font-color-theme2);
+      @include font-dpr($font28);
+    }
+
+    .checkBoxImg {
+      width: 40px;
+      height: 40px;
+      position: relative;
+
+      .checkBoxIcon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+
+
+
+.selectReserve{
+  width: 100%;
+height: 90vh;
+margin: 0 auto;
+background: #ffffff;
+position: absolute;
+bottom: 0;
+z-index: 300;
+.maskTitle{
+  width: 100%;
+  position: absolute;
+  background: #ffffff;
+  font-size:32px;
+  border-bottom:1px solid #f5f5f5;
+  z-index: 350;
+
+  .titleText{
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+}
+.passContent{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+    .passSearch{
+      width: 96%;
+      margin: 0 auto;
+      height: 80px;
+      @include bg_color($background-color-theme7);
+      border-radius:10px;
+      display: flex;
+      justify-content: space-around;
+      padding: 4px 10px;
+      .btnSearch{
+        display: block;
+        width:156px;
+        height: 80px;
+        border:none;
+        background: none;
+        text-align: center;
+        line-height: 80px;
+        @include font-dpr($font28);
+        @include font_color($font-color-theme5);
+        @include btn_yellow();
+        border-radius:10px;
+      }
+      .at-input {
+        background: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: inherit !important;
+      }
+
+      .at-input input {
+        border: none !important;
+        background: none !important;
+        height: 80px !important;
+        padding: 0 !important;
+        font-size: 24px;
+        margin: 0 auto !important;
+      }
+
+      .at-input input::placeholder {
+        line-height: 80px !important;
+      }
+    }
+    
+  }
+  .ulBox{
+    width: 96%;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    padding-top: 80px;
+    height:70vh;
+    overflow-y:scroll;
+
+    .liBox{
+        width: 100%;
+        margin-bottom: 20px;
+        
+        .msgBox{
+            display: flex;
+            justify-content: space-between;
+            .leftBox{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0;
+                flex-grow: 1;
+            }
+        }
+        .leftImg{
+            width: 8%;
+            Image{
+                width: 36px;
+                height: 36px;
+                margin: 0 auto;
+            }
+        }
+        .midText{
+            flex-grow: 1;
+            .itemName{
+               display: flex;
+                padding-bottom: 24px;
+                Text{
+                   @include font-dpr($font30);
+                   @include font_color($font-color-theme2);
+                   display: block;
+                }
+            }
+            .itemCard{
+                @include font-dpr($font26);
+                @include font_color($font-color-theme4);
+            }
+        }
+        .editImg{
+            position: relative;
+            width: 8%;
+            Image{
+                width: 28px;
+                height: 28px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding:20px 0;
+    display: flex;
+    justify-content: space-around;
+    box-shadow:2px -5px 20px 0px rgba(188,188,188,0.26);
+    @include bg_color($background-color-theme0);
+    z-index: 120;
+    
+    .numSelect{
+        @include font-dpr($font24);
+        @include font_color($font-color-theme2);
+        line-height: 80px;
+    }
+    .sureSelect{
+        box-shadow:-1px 4px 20px 0px rgba(255,163,2,0.39);
+        @include font_color($font-color-theme5);
+        @include font-dpr($font30);
+        width: 438px;
+        line-height: 80px;
+        text-align: center;
+        border-radius:40px;
+        @include btn_yellow()
+    }
+}
+.addImg{
+    position: fixed;
+    bottom: 14%;
+    right: 3%;
+    width: 80px;
+    height: 80px;
+    z-index: 130;
+}
+}
+
+
+.addPassenger {
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  z-index: 400;
+
+  .maskTitle {
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    font-size: 32px;
+    border-bottom: 1px solid #f5f5f5;
+    z-index: 450;
+
+    .titleText {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .closeIcon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+
+
+// 联系人信息
+.contactsMsg {
+  width: 94%;
+  margin: 0 auto;
+  box-shadow: 1px 2px 24px 0px rgba(155, 150, 143, 0.15);
+  border-radius: 12px;
+  margin-bottom: 18px;
+  @include bg_color($background-color-theme0);
+  padding-top: 80px;
+  
+
+  .ulBox {
+    width: 100%;
+
+    .liBox {
+      display: flex;
+      height: 100px;
+      border-bottom: 1px solid $border-Color1;
+
+      .leftText {
+        width: 34%;
+        @include font-dpr($font30);
+        @include font_color($font-color-theme2);
+        line-height: 100px;
+        display: flex;
+      }
+
+      Input {
+        @include font-dpr($font26);
+        @include font_color($font-color-theme2);
+        flex-grow: 1;
+        height: 98px;
+      }
+
+      Input::placeholder {
+        @include font_color($font26);
+      }
+    }
+
+    .liBox:last-child {
+      border: none;
+    }
+  }
+}
+
+.btnSure {
+  box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+  @include font_color($font-color-theme5);
+  @include font-dpr($font30);
+  position: absolute;
+  width: 90%;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 50px;
+  @include btn_yellow()
+}
+}
+.textareaBox{
+  position: relative;
+  textarea{
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left: 0;
+  }
+  textarea::placeholder {
+    z-index: 0 !important;
+  }
+}
+.backBox{
+   position: fixed;
+   right: 6%;
+   bottom: 20%;
+   width: 120px;
+   height: 120px;
+   z-index: 100;
+}
+.backIconText{
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:0px 0px 18px 6px rgba(176, 176, 176, 0.22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+}
+.backIcon{
+  width: 42px;
+  height: 38px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+}
+.backText{
+  font-size: 20px;
+  color: #333333;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.editData{
+  display: flex;
+  justify-content: space-between;
+  .tipsMsg{
+    color: #9F9F9F;
+    font-size: 26px;
+  }
+  .editImg {
+    position: relative;
+    width: 8%;
+
+    Image {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      
+    }
+  }
+}
+.bottomMask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.detailShow {
+  bottom: 98px !important;
+}
+
+.detailMsgBox{
+    position: fixed;
+    bottom:100px;
+    width: 100%;
+    @include bg_color($background-color-theme0);
+    border-radius: 14px  14px 0px 0px;
+    z-index: 100;
+    padding-bottom:  40px;
+    box-shadow:2px -5px 20px 0px rgba(188,188,188, 26);
+    .nameH4{
+        @include font-dpr($font36);
+        @include font_color($font-color-theme2);
+        font-weight: bold;
+        padding:  40px 0  70px 0;
+        text-align: center;
+    }
+    .detailMsgBoxUl,.nameH4{
+        width: 94%;
+        margin: 0 auto;
+    }
+    .detailMsgBoxLi{
+        margin-bottom:  50px;
+    }
+    .itemTitle{
+        display: flex;
+        padding-bottom:  30px;
+        
+        .detailMsgBoxP{
+            @include font-dpr($font36);
+            @include font_color($font-color-theme2);
+            margin-right:  30px;
+            font-weight: 600;
+        }
+        .detailMsgBoxI{
+            flex-grow: 1;
+            height:  2px;
+            @include bg_color($background-color-theme7);
+            margin-top:  24px;
+        }
+    }
+    .contentText{
+        // display: flex;
+        // justify-content: space-between;
+        .leftDetailMsg{
+            display: flex;
+            justify-content: space-between;
+            .detailMsgBoxSapn {
+              @include font-dpr($font26);
+              @include font_color($font-color-theme4);
+              padding-bottom: 20px;
+              Text{
+                  @include font-dpr($font26);
+                  @include font_color($font-color-theme4);
+                  padding-bottom: 20px;
+              }
+            }
+
+            .detailMsgBoxB {
+              @include font-dpr($font26);
+              @include font_color($font-color-theme1);
+              padding-bottom: 20px;
+            }
+        }
+        
+    }
+    
+}
+// 接送机------------------------------
+.baoCheBox{
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow: hidden;
+  background: #F2F2F2;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px 10px 0 0;
+  .baoCheTable{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: #ffffff;
+    z-index: 560;
+    .guiZeText{
+      padding:10px 0;
+      text-align:center;
+      display:block;
+      line-height:60px;
+      height: 60px;
+    }
+    .guaniBox{
+      position: absolute;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+      top:10px;
+      display: flex;
+      justify-content: space-around;
+      Image{
+       width:30px;
+       height:30px;
+       display:block;
+       line-height:80px;
+       position:absolute;
+       top:0;
+       bottom:0;
+       left:0;
+       right:0;
+       margin:auto;
+
+      }
+    }
+    .itemTable{
+      flex-grow:1;
+      display: flex;
+      justify-content: space-around;
+      .selectTable{
+        font-size: 30px;
+        color: #646464;
+        padding:20px 10px;
+        border-bottom: 6px solid transparent;
+      }
+      .selectTableOn{
+        border-bottom: 6px solid #FFB400;
+        color: #FFB400;
+      }
+    }
+    .at-input {
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: inherit !important;
+
+    }
+
+    .at-input__input {
+      border: none !important;
+      background: none !important;
+      height: 66px !important;
+      padding: 0 !important;
+      font-size: 26px !important;
+    }
+
+    .at-input__input Input::placeholder {
+      line-height: 66px !important;
+    }
+  }
+  .baoCheContent{
+    padding: 100px 0;
+    height: 62vh;
+    overflow-y: scroll;
+    width: 100%;
+    .textBox{
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      .textTitle{
+        font-size: 28px;
+        color: #333333;
+        margin-bottom: 18px;
+
+      }
+      .textContent{
+        font-size: 24px;
+        color: #999999;
+      }
+    }
+    .itemBaoChe{
+      width: 96%;
+      margin: 0 auto;
+      border-radius: 10px;
+      padding: 30px 0;
+      background: #ffffff;
+      margin-bottom: 20px;
+      .itemTitle{
+        display: flex;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        .checkBaoCheIcon{
+          width: 36px;
+          position: relative;
+          margin-right: 16px;
+          Image{
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+          }
+        }
+        Text{
+          font-size: 32px;
+          color: #333333;
+          font-weight: 600;
+          line-height: 36px;
+          display: block;
+        }
+      }
+      .box{
+        display: flex;
+        justify-content: flex-end;
+        width: 94%;
+      }
+      .itemUl{
+        width: 94%;
+        .itemLi{
+          display: flex;
+          .leftIcon{
+            width: 40px;
+            position: relative;
+            margin-right: 20px;
+            Image{
+              width: 36px;
+              height: 36px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+               display: block;
+            }
+          }
+          .rightContent{
+            flex-grow: 1;
+            .rightLi{
+              width: 100%;
+              padding-bottom: 20px;
+              border-bottom: 1px solid #F2F2F2;
+              margin-bottom: 30px;
+              .rightName { 
+                font-size: 28px;
+                color: #333333;
+                display: flex;
+                line-height: 36px;
+
+                Text{
+                  font-size: 28px;
+                  color: #333333;
+                  display: block;
+                }
+              }
+              .cardNum {
+                font-size: 22px;
+                color: #333333;
+              }
+              .diDianValue{
+                flex-grow: 1;
+                margin-right: 20px;
+                font-size: 28px;
+                color: #cccccc;
+                
+              }
+              .diDianValueColor{
+                color: #333333;
+              }
+              .picker {
+                font-size: 28px;
+                color: #cccccc;
+                flex-grow: 1;
+                margin-right: 20px;
+
+              }
+
+              .pickerVColor{
+                color: #333333;
+              }
+              
+              .flex{
+                display: flex;
+                justify-content: space-between;
+              }
+              .jisJianBox{
+                display: flex;
+                .jianBox{
+                  width: 60px;
+                  position: relative;
+                  Image{
+                    position: absolute;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    
+                  }
+                }
+                .numBox{
+                  padding:0 36px;
+                  height: 40px;
+                  line-height: 40px;
+                  border-radius: 6px;
+                  border:1px solid #CCCCCC;
+                  margin:0 18px;
+                  font-size: 28px;
+                  color: #323232;
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+    
+  }
+  .btnBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    background: #ffffff;
+    .itemBtn{
+      // box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+      @include font-dpr($font28);
+      line-height: 84px;
+      height: 84px;
+      text-align: center;
+      border-radius: 10px;
+      text-align: center;
+      margin: 0 14px;
+    }
+    .btnCancel{
+      flex-grow: 1;
+      background: #E6E6E6;
+      color: #999999;
+    }
+    .btnSure{
+      flex-grow: 2;
+      @include btn_yellow();
+      color: #ffffff;
+    }
+  }
+  
+}
+
+.rightJiantou {
+  width: 30px;
+  position: relative;
+
+  Image {
+    position: absolute;
+    width: 18px;
+    height: 32px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+  }
+}
+.fuWuBox{
+  width: 100%;
+  margin-top: 40px;
+}
+.jieSongJiModel{
+  // width: 94%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow:4px -2px 20px 0px rgba(155, 150, 143, 0.34);
+  background: #ffffff;
+  margin-bottom: 24px;
+  // padding-bottom: 20px;
+  .modelItem{
+    
+    .itemBox{
+      width: 96%;
+      margin: 0 auto;
+      display: flex;
+    }
+    .leftMOdelIcon{
+      width: 42px;
+      position: relative;
+      margin-right: 16px;
+      Image{
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+      }
+    }
+    .modelRight{
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+      .modelName{
+        flex-grow: 1;
+        font-size: 30px;
+        color: #656060;
+        font-weight: 600;
+        line-height: 100px;
+      }
+    }
+     .yiXuanData{
+        border-radius:12px;
+        width: 96%;
+        margin: 0 auto;
+        // position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    .biaoQianSpan{
+      height:30px;
+      background:linear-gradient(90deg, rgba(246, 141, 104, 1), rgba(243, 88, 72, 1));
+      border-radius:0px 12px 0px 12px;
+      padding: 0 20px;
+      font-size: 20px;
+      color: #ffffff;
+      position: absolute;
+      right: 0;
+      top:0;
+      line-height: 30px;
+    }
+    .itemData{
+      margin-bottom: 20px;
+      background: #F7F7F7;
+      position: relative;
+    }
+    .itemLi:last-child{
+      border:none;
+    }
+    .itemLi{
+      width: 100%;
+      border-bottom: 1px dashed #CCCCCC;
+      position: relative;
+      padding-bottom: 20px;
+      .jieSongDel{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 80px;
+        Image{
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          display: block;
+        }
+      }
+      .jieSongH2,.jieSongName,.jieSongP{
+        width: 92%;
+        margin: 0 auto;
+      }
+      .jieSongH2{
+        font-size: 28px;
+        color: #333333;
+        padding-top: 28px;
+        font-weight: 600;
+        padding-bottom: 18px;
+      }
+      .jieSongName{
+        color: #656060;
+        font-size: 24px;
+      }
+      .jieSongP{
+        display: flex;
+        font-size: 20px;
+        color: #999999;
+        line-height: 30px;
+        Text{
+          font-size: 20px;
+          color: #999999;
+         
+        }
+      }
+      .flexBox{
+        justify-content: space-between;
+        .jieSongB{
+          color: #F35A4A;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  .baoXianLi:last-child{
+    border: none;
+  }
+  .baoXianLi{
+    width: 94%;
+    margin: 0 auto;
+    border-bottom: 1px solid #F2F1ED;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    .leftName{
+      .baoXianName{
+        font-size: 28px;
+        color: #5A5A5A;
+      }
+      .baoXianContent{
+        color: #AAAAAA;
+        font-size: 20px;
+      }
+    }
+    .rightPrice{
+      display: flex;
+      .baoXianPrice{
+        font-size: 26px;
+        color: #373737;
+        line-height:80px;
+      }
+      .checkStatu{
+        position: relative;
+        width: 60px;
+        .weiCheck{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width:30px;
+          height:30px;
+          border:1px solid rgba(204, 204, 204, 1);
+          border-radius:50%;
+        }
+        .BaoXianCheckBox{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width:32px;
+          height:32px;
+        }
+      }
+    }
+  }
+  .baoXianFlag{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    .flagStatus{
+      display: flex;
+      Text{
+        display: flex;
+        font-size: 24px;
+        color: #999999;
+        line-height: 32px;
+        margin-right: 10px;
+      }
+    }
+    
+    .jianTouBox{
+      position: relative;
+      width: 20px;
+      height: 32px;
+      Image{
+        width: 18px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .zhanKai{
+        transform: rotateX(180deg)
+      }
+    }
+  }
+  }
+ 
+}
+// 接送机end
+
+// 底部
+.total {
+    padding:  20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow:2px -5px 20px 0px rgba(188,188,188, 26);
+    @include bg_color($background-color-theme0);
+    z-index: 120;
+    .leftFoot{
+       display: flex;
+       line-height: 84px;
+      .font{
+        font-size: 20px;
+        color: #626262;
+       }
+
+        .totalprice {
+          font-size: 38px;
+          color: #ff5f4f;
+          font-weight: bold;
+        }
+
+        .peoplenum {
+          font-size: 28px;
+        }
+    }
+    .box{
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        .textMsg{
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin-right:  40px;
+            .rightFoot{
+                display: flex;
+            }
+            .priceB{
+                @include font-dpr($font46);
+                @include font_color($font-color-theme1); 
+                line-height:  60px;
+            }
+            .totalPriceSpan{
+                padding-left:  10px;
+            }
+            .totalPriceSpan,.mingXiI{
+                @include font-dpr($font24);
+                @include font_color($font-color-theme6); 
+            }
+            .mingXiI{
+                line-height:  80px;
+                margin-right:  10px;
+            }
+            .doenIcon {
+                width:  18px;
+                height:  10px;
+                margin-top:  38px;
+            }
+        
+        }
+        .showOrder {
+            background:linear-gradient(90deg, rgba(255, 212, 0, 1), rgba(255, 179, 0, 1));
+            box-shadow:-1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+            border-radius:10px;
+            padding: 0 50px ;
+            line-height: 84px;
+            height: 84px;
+            color: #ffffff;
+            font-size: 28px;
+        }
+        
+    }
+}
+
+
+// 车型选择
+.itemVehicleType{
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  .checkVehicleBox{
+    width: 36px;
+    position: relative;
+    margin-right: 28px;
+    Image{
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;bottom: 0;right: 0;
+      margin: auto;
+    }
+  }
+  .carImg{
+    width: 220px;
+    margin-right: 30px;
+    Image{
+      display: block;
+      width: 216px;
+      height: 154px;
+      border-radius: 12px;
+    }
+  }
+  .rightCarMsg{
+    flex-grow: 1;
+    margin-right: 10px;
+    .carTypeName{
+      display: flex;
+      Text{
+        display: block;
+        font-size: 28px;
+        color: #333333;
+      }
+    }
+    .otherMsg{
+      display: flex;
+      padding: 16px 0;
+      .numBox{
+        display: flex;
+        margin-right: 10px;
+        .iconNum{
+          width: 36px;
+          position: relative;
+          margin-right: 4px;
+          Image{
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 24px;
+            height: 30px;
+          }
+        }
+        Text{
+          font-size: 24px;
+          color: #666666;
+          line-height: 30px;
+        }
+      }
+    }
+    .carTypeTips{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      .tipsSpan{
+        padding: 0 12px;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 4px;
+        border:1px solid #E8E8E8;
+        color: #666666 ;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+    
+  }
+  .carPriceB {
+    display: flex;
+    .jisGebox{
+      display: flex;
+      bottom: 0;
+      left: 0;
+    }
+    
+    
+  }
+}
+
+.searchBox {
+  // width: 94%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  flex-grow: 1;
+  .inputBox {
+    background: #F7F7F7;
+    border-radius: 12px;
+    height: 66px;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-right: 20px;
+    
+  }
+
+  .imgBox {
+    width: 80px;
+    position: relative;
+
+    .souSuoIcon,
+    .closeIcon {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+
+  }
+}
+.searchBtn {
+  font-size: 30px;
+  color: #333333;
+  line-height: 66px;
+}
+.dingWeiBox{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  // width: 96%;
+  z-index: 1000;
+  .sureTrainBtn{
+    background:linear-gradient(-90deg, rgba(255, 147, 0, 1), rgba(255, 198, 0, 1));
+    border-radius:12px;
+    width: 90%;
+    margin: 0 auto;
+    height: 90px;
+    line-height: 90px;
+    color:#ffffff;
+    font-size: 28px;
+    text-align: center;
+  }
+}
+.dingweiMsg{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding-top:40px;
+    .dingWeiIconBox{
+      width: 36px;
+      position: relative;
+      margin-right: 20px;
+      Image{
+        width: 30px;
+        height: 44px;
+        position: absolute;
+        top:24px;
+        left: 0;  
+        right: 0;
+        margin: auto;
+        display: block;
+      }
+    }
+    .dingWEiText{
+      width: 90%;
+      margin: 0 auto;
+      flex-grow: 1;
+      .dingWeiName{
+        font-size: 28px;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+      .dingWeiDetail{
+        font-size: 24px;
+        color: #666666;
+      }
+    }
+  }
+  .dingWeiList{
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    
+  }
+
+  .tipsText{
+    width: 100%;
+    padding: 10px 0;
+    background: #FEF5DF;
+    margin-top: 100px;
+    Text{
+      display: block;
+      width: 96%;
+      margin: 0 auto;
+      font-size: 20px;
+      color: #5B5B5B;
+    }
+  }
+  .beiZhuBox{
+    display: none;
+  }
+  .rightName {
+    font-size: 28px;
+    color: #333333;
+    display: flex;
+    line-height: 36px;
+
+    Text {
+      font-size: 28px;
+      color: #333333;
+      display: block;
+    }
+  }

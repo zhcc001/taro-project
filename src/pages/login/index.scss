@@ -11,6 +11,8 @@
     @include font-dpr($font30);
 }
 .formBox{
+    width: 98%;
+    margin: 0 auto;
     padding-top:100px;
     .li{
         display:flex;
@@ -18,7 +20,7 @@
         border-radius:10px;
         margin-bottom:20px;
         height:88px;
-        
+        justify-content: space-between;
     }
     .liBox{
         display:flex;
@@ -35,12 +37,8 @@
         }
     }
     .imgBox{
-        width:36px;
+        width:66px;
         position:relative;
-        margin-left:20px;
-        margin-right:20px;
-
-        
     }
     .IconImg{
            width:36px;
@@ -65,6 +63,27 @@
 
         
     }
+    .at-input{
+        height: 88px;
+        padding: 0;
+        margin: 0;
+        Input::placeholder{
+            color:#dbdbdb;
+            @include font-dpr($font30);
+        }
+        Input{
+            height: 88px !important;
+        padding: 0;
+        margin: 0;
+        line-height: normal;
+        @include font_color($font-color-theme2);
+        @include font-dpr($font30);
+        height:88px;
+        flex-grow:1;
+        border:none;
+        background:none;
+        }
+    }
 }
 .xieYi{
     display:flex;
@@ -81,21 +100,61 @@
 }
 .btn{
     display:block;
-    width:100%;
+    width: 98%;
+    margin: 0 auto;
     height:88px;
-    color:#949494;
+    // color:#949494;
     @include font-dpr($font36);
-    background:#cccccc;
+    // background:#cccccc;
     border-radius:10px;
     margin-top:40px;
     text-align:center;
     line-height:88px;
 }
+.btnBg{
+    background-color: $background-color-theme;
+    color: #ffffff;
+}
 .goToBtn{
     @include font_color($font-color-theme);
     @include font-dpr($font36);
-    text-decoration: underline;
-    padding-top: 100px;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $font-color-theme;
+}
+.goToBtnBox{
     display: flex;
     justify-content: flex-end;
+    padding-top: 20px;
+    
+}
+.registerBtn{
+    // border: 1px solid $background-color-theme1;
+    color: #ffffff;
+    font-size: 26px;
+    width: 230px;
+    // padding: 30px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    border-radius: 8px;
+    margin: 0 auto;
+    // margin-top: 60px;
+    background: $background-color-theme1;
+
+}
+.tipsText {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    .tipsSpan{
+        color: #5B5B5B;
+        font-size: 24px;
+    }
+    .tipsSpan2 {
+      color: #FFB400;
+      font-size: 24px;
+      text-decoration: underline;
+    }
+    
 }

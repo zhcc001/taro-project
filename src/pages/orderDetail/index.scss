@@ -1,5 +1,8 @@
 @import '../../assets/css/mixin.scss';
 @import '../../assets/css/variable.scss';
+// .orderDetailBox{
+//   padding-top: 100px;
+// }
 .OrderStatus{
     display: flex;
     flex-wrap: nowrap;
@@ -36,6 +39,7 @@
     width: 94%;
     margin: 0 auto;
     padding-bottom: 200px;
+    padding-top: 20px;
     .OrderMessage{
         margin: 0 auto;
         width: 100%;
@@ -46,14 +50,16 @@
         .OrderNumber{
             height: 70px;
             line-height: 70px;
-            font-size: 22px;
-            color: #383838;
+            font-size: 24px;
+            color: #373737;
             padding-left: 24px;
             border-bottom: 2px dashed #eaeaea;
             display: block;
+            background:linear-gradient(-62deg,rgba(255,206,0,1),rgba(255,180,0,1),rgba(255,205,0,1));
+            border-radius:10px 10px 0px 0px;
           }
           .PlaneMessage{
-            width: 96%;
+            width: 94%;
             margin: 0 auto;
             margin-bottom: 60px;
             .application{
@@ -73,29 +79,36 @@
                 width: 100%;
                 display: flex;
                 flex-wrap: nowrap;
+                padding:20px 0;
+                justify-content: space-between;
                 .start,.arrival{
                     display: flex;
                     flex-direction: column;
                 }
                 .arrow{
-                    padding-top: 28px;
-                    margin: 0 11.6%;
-                    width: 18%;
+                    padding-top: 32px;
+                    width: 120px;
                     Image{
                         width: 100%;
-                        height: 22px;
-                        // vertical-align: middle;
+                        height: 26px;
                       }
                   }
                 .time{
-                    font-size: 20px;
+                    font-size: 26px;
                     color: #333333;
                     line-height: 32px;
                   }
-                .place{
-                    font-size: 34px;
+                  .cityNameMsg{
+                    font-size: 38px;
                     font-weight: bold;
-                    line-height: 48px;
+                    color: #333333;
+                    line-height: 60px;
+                  }
+                .place{
+                    font-size: 24px;
+                    // font-weight: bold;
+                    // line-height: 48px;
+                    color: #777777;
                   }
                 .mark{
                     font-size: 22px;
@@ -103,7 +116,7 @@
                     line-height: 52px;
                   }
                 .arrival{
-                    .time,.mark,.place{
+                    .time,.mark,.place,.cityNameMsg{
                         text-align: right;
                         
                       }
@@ -115,8 +128,8 @@
 
   .AirMessage{
     width: 100%;
-    padding-top: 16px;
-    border-bottom: 2px dashed #f4f4f4;
+    padding: 16px 0;
+    // border-bottom: 2px dashed #f4f4f4;
     border-top: 2px dashed #f4f4f4;
     .viewBox{
         Image{
@@ -176,7 +189,7 @@
         .th,.td {
           text-align: center;
           color: #5C5C5C;
-          width: 140px;
+          width: 160px;
           padding: 20px 0;
         }
         .th {
@@ -193,6 +206,21 @@
         }
         .tdColor3{
           color: #9B9B9B;
+        }
+        .tuiGaiBtn{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          padding: 22px 0;
+          .btnItem{
+            height:66px;
+            border:2px solid rgba(255, 178, 0, 1);
+            border-radius:12px;
+            padding: 0 120px;
+            line-height: 66px;
+            font-size: 28px;
+            color: #FFB200;
+          }
         }
   }
 
@@ -222,6 +250,10 @@
                 color: #595959;
                 font-weight: bold;
               }
+              .telNumber{
+                font-size: 22px;
+                color: #ABABAB;
+              }
           }
           .liBox:last-child {
             border: none;
@@ -237,23 +269,627 @@
     box-shadow:2px -5px 20px 0px rgba(188,188,188,0.26);
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 10px 0;
+    .keFu {
+      position: relative;
+      margin: 0 50px;
+      Button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+      }
+      .keFuIcon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        display: block;
+
+      }
+
+      .footerText {
+        font-size: 20px;
+        color: #61605f;
+        text-align: center;
+      }
+    }
     .btn{
-      width:320px;
-      height:84px;
+      // width:320px;
+      height:78px;
       border:2px solid rgba(207,207,207,1);
       border-radius:10px;
       font-size:28px;
       font-family:PingFangSC-Medium;
       font-weight:bold;
       color:rgba(207,207,207,1);
-      line-height: 82px;
+      line-height: 78px;
       text-align: center;
+      padding: 0 30px;
+      flex-grow: 1;
+      margin-right: 20px;
     }
     .payBtn{
       background:linear-gradient(90deg,rgba(255,212,0,1),rgba(255,179,0,1));
       border:none;
       color: #ffffff;
+      padding: 0 100px;
+      height: 80px;
+      line-height: 78px;
+      flex-grow: 3;
     }
   }
-  
+  .backBox{
+  position: fixed;
+  right: 6%;
+  bottom: 20%;
+  width: 120px;
+  height: 120px;
+  z-index: 100;
+}
+.backIconText{
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:0px 0px 18px 6px rgba(176, 176, 176, 0.22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+}
+.backIcon{
+  width: 42px;
+  height: 38px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+}
+.backText{
+  font-size: 20px;
+  color: #333333;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.tickertMask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 50;
+  top: 0;
+  left: 0;
+}
+
+
+
+.registerMask {
+  width: 88%;
+  height: 460px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+//   padding: 30px 0;
+  z-index: 300;
+
+  .guanBiIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .tipsText {
+    font-size: 36px;
+    color: #373737;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .goToBtnBox {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+
+  }
+}
+
+.tipsBox{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    // padding-bottom: 60px;
+    // margin-top:60px;
+
+    .tipsMsg{
+        margin: 0 auto;
+        color: white;
+        @include font-dpr($font30);
+        width:60%;
+        display:block;
+        // margin-bottom: 20px;
+        // padding-top: 30px;
+    }
+    .btn{
+        width: 80%;
+        margin: 0 auto;        
+        display:block;
+        height:88px;
+        @include font-dpr($font36);
+        background:white;
+        border-radius:10px;
+        margin-top:40px;
+        text-align:center;
+        line-height:88px;
+    }
+    
+}
+
+.imgBox{
+        display: flex;
+        margin: 0 auto;
+        padding-top: 60px;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        // margin: auto;
+        // height: 180px;
+        Image{
+            width: 160px;
+            height: 160px;
+            margin-right:30px;
+            margin-left: 100px;
+        }
+        Text{
+            color: #FFB400;
+            @include font-dpr($font60);
+            line-height: 160px;
+        }
+    }
+    .orderMaskMsg{
+      padding-top: 20px;
+    }
+    .tipsNull {
+      display: flex;
+      justify-content: space-around;
+    }
+ .tipsMsg {
+   margin: 0 auto;
+   color: #373737;
+   @include font-dpr($font30);
+  //  width: 60%;
+   display: flex;
+   justify-content: space-around;
+   padding: 20px 0;
+   
+ }
+
+ .addPassenger {
+   width: 100%;
+   height: 90vh;
+   margin: 0 auto;
+   background: #F7F7F7;
+   position: absolute;
+   bottom: 0;
+   z-index: 400;
+   border-radius: 14px 14px 0 0;
+
+   .containter {
+     height: 60vh;
+     overflow-y: scroll;
+     padding: 120px 0;
+
+
+   }
+
+   .maskTitle {
+     width: 100%;
+     position: absolute;
+     background: #ffffff;
+     font-size: 32px;
+     z-index: 450;
+     border-radius: 14px 14px 0 0;
+
+     .titleText {
+       text-align: center;
+       padding: 20px 0;
+     }
+
+     .closeIcon {
+       position: absolute;
+       right: 20px;
+       top: 20px;
+       width: 30px;
+       height: 30px;
+     }
+
+   }
+
+
+   // 联系人信息
+   .contactsMaskMsg {
+     width: 94%;
+     margin: 0 auto;
+
+     .msgTitle {
+       display: flex;
+       width: 99%;
+       margin: 0 auto;
+       margin-bottom: 20px;
+
+       .line {
+         width: 6px;
+         height: 34px;
+         background: linear-gradient(129deg, rgba(243, 135, 83, 1), rgba(251, 91, 79, 1));
+         border-radius: 3px;
+         margin-right: 20px;
+       }
+
+       .msgH4 {
+         font-size: 32px;
+         color: #333333;
+         line-height: 34px;
+       }
+     }
+
+     .box {
+       width: 100%;
+       box-shadow: 1px 2px 24px 0px rgba(155, 150, 143, 0.15);
+       border-radius: 12px;
+       margin-bottom: 18px;
+       background: #ffffff;
+     }
+
+     .ulBox {
+       width: 94%;
+       margin: 0 auto;
+
+       .liBox {
+        //  display: flex;
+        //  height: 100px;
+         border-bottom: 1px solid $border-Color1;
+         padding: 20px 0;
+
+         .at-input {
+           background: none !important;
+           margin: 0 !important;
+           padding: 0 !important;
+           position: inherit !important;
+         }
+
+         .at-input input {
+           border: none !important;
+           background: none !important;
+           height: 100px !important;
+           padding: 0 !important;
+           font-size: 30px;
+           margin: 0 auto !important;
+           color: #333333;
+         }
+
+         .at-input input::placeholder {
+           line-height: 100px !important;
+           color: #999999
+         }
+
+         .leftHText {
+           width: 34%;
+           height: 100px;
+           display: flex;
+
+           Text {
+             @include font-dpr($font30);
+             @include font_color($font-color-theme2);
+             line-height: 100px;
+             width: 60%;
+           }
+
+           .imgBox {
+             position: relative;
+             width: 30px;
+             height: 100px;
+
+             Image {
+               position: absolute;
+               top: 0;
+               left: 0;
+               bottom: 0;
+               right: 0;
+               margin: auto;
+               width: 24px;
+               height: 14px;
+             }
+           }
+
+         }
+
+         .leftText {
+           width: 34%;
+           @include font-dpr($font30);
+           @include font_color($font-color-theme2);
+           display: flex;
+         }
+         .telNumber {
+           font-size: 22px;
+           color: #ABABAB;
+           line-height: 30px;
+         }
+         .rightSelect{
+           display: flex;
+           justify-content: flex-end;
+           flex-grow: 1;
+          .rightJiantou{
+            width: 30px;
+            position: relative;
+            Image{
+              position: absolute;
+              width: 15px;
+              height: 30px;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+            }
+          }
+         }
+       }
+
+       .liBox:last-child {
+         border: none;
+       }
+     }
+   }
+
+   .btnSure {
+     box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+     @include font_color($font-color-theme5);
+     @include font-dpr($font30);
+     position: absolute;
+     width: 90%;
+     bottom: 30px;
+     left: 0;
+     right: 0;
+     margin: auto;
+     line-height: 84px;
+     text-align: center;
+     border-radius: 10px;
+     @include btn_yellow();
+     z-index: 500;
+   }
+ }
+ .picker {
+   font-size: 30px;
+   color: #999999;
+  //  line-height: 90px;
+   flex-grow: 1;
+   text-align: right;
+   margin-right: 10px;
+   
+ }
+
+ .pickerVColor,
+ .pickerBColor {
+   color: #333333;
+ }
+.at-textarea {
+  margin: 0 auto;
+  border: 1px solid #D9D9D9;
+}
+.chengKe{
+
+   .liBox {
+     width: 100%;
+     margin-bottom: 20px;
+     border-bottom: 1px solid #F4F4F4;
+
+     .msgBox {
+       display: flex;
+       justify-content: space-between;
+
+       .leftBox {
+         display: flex;
+         justify-content: space-between;
+         padding: 20px 0;
+         flex-grow: 1;
+       }
+     }
+
+     .leftImg {
+       width:50px;
+       position: relative;
+       Image {
+         width: 36px;
+         height: 36px;
+         margin: 0 auto;
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         margin: auto;
+         z-index: 550;
+       }
+     }
+
+     .midText {
+       flex-grow: 1;
+
+       .itemName {
+         display: flex;
+
+         Text {
+           @include font-dpr($font30);
+           @include font_color($font-color-theme2);
+           padding-bottom: 14px;
+           margin-right: 10px;
+         }
+
+       }
+
+       .itemCard {
+         @include font-dpr($font26);
+         @include font_color($font-color-theme4);
+       }
+     }
+   }
+}
+
+.fuWuBox{
+  width: 100%;
+  margin-top: 40px;
+}
+.jieSongJiModel{
+  // width: 94%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow:4px -2px 20px 0px rgba(155, 150, 143, 0.34);
+  background: #ffffff;
+  margin-bottom: 24px;
+  padding-top: 30px;
+  .modelItem{
+    .msgtitle {
+      margin-bottom: 18px;
+      display: flex;
+      .line {
+        display: block;
+        width: 6px;
+        height: 33px;
+        background: linear-gradient(129deg, rgba(243, 135, 83, 1), rgba(251, 91, 79, 1));
+        border-radius: 3px;
+        margin-right: 14px;
+        margin-left: 10px;
+        margin-top: 4px;
+      }
+
+      Text {
+        font-size: 32px;
+        color: #595959;
+        font-weight: bold;
+      }
+
+    }
+     .yiXuanData{
+        border-radius:12px;
+        width: 96%;
+        margin: 0 auto;
+        // position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    .biaoQianSpan{
+      height:30px;
+      background:linear-gradient(90deg, rgba(246, 141, 104, 1), rgba(243, 88, 72, 1));
+      border-radius:0px 12px 0px 12px;
+      padding: 0 20px;
+      font-size: 20px;
+      color: #ffffff;
+      position: absolute;
+      right: 0;
+      top:0;
+      line-height: 30px;
+    }
+    .itemData{
+      margin-bottom: 20px;
+      background: #F7F7F7;
+      position: relative;
+    }
+    .itemLi:last-child{
+      border:none;
+    }
+    .itemLi{
+      width: 100%;
+      border-bottom: 1px dashed #CCCCCC;
+      position: relative;
+      padding-bottom: 20px;
+      .jieSongDel{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 80px;
+        Image{
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          display: block;
+        }
+      }
+      .jieSongH2,.jieSongName,.jieSongP{
+        width: 92%;
+        margin: 0 auto;
+      }
+      .jieSongH2{
+        font-size: 28px;
+        color: #333333;
+        padding-top: 28px;
+        font-weight: 600;
+        padding-bottom: 18px;
+      }
+      .jieSongName{
+        color: #656060;
+        font-size: 24px;
+      }
+      .jieSongP{
+        display: flex;
+        font-size: 20px;
+        color: #999999;
+        line-height: 30px;
+        Text{
+          font-size: 20px;
+          color: #999999;
+         
+        }
+      }
+      .flexBox{
+        justify-content: space-between;
+        .jieSongB{
+          color: #F35A4A;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  }
+ 
+}
+
+ .tipsText {
+   width: 100%;
+   padding: 10px 0;
+   background: #FEF5DF;
+   position: fixed;
+   top: 0;
+   left: 0;
+   Text {
+     display: block;
+     width: 96%;
+     margin: 0 auto;
+     font-size: 20px;
+     color: #5B5B5B;
+   }
+ }

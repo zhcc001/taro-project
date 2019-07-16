@@ -3,6 +3,10 @@ import Auth from './auth'
 
 //请求封装
 async function request (url, data = {}, method = "GET"||"POST"|| "PUT"|| "DELETE"|| "OPTIONS"){
+	// Taro.showLoading({
+	//   title: '加载中',
+	//   mask: true
+	// })
 	const state = Taro.$store.getState();
 	const header = {};
 	//没有url，直接报错
@@ -32,18 +36,12 @@ async function request (url, data = {}, method = "GET"||"POST"|| "PUT"|| "DELETE
 	//返回promise
 	return new Promise(resolve=>{
 		if( res.statusCode === 200 ){
-			if(res.data.error === -1){
-				Taro.showModal({
-					title: '出错了',
-					content: res.data.error_reason,
-					showCancel: false
-				})
-			}else{
 				resolve(res.data)
-			}
+				
 		}else{
+			Taro.hideLoading()
 			Taro.showModal({
-				title: '出错了',
+				title: '接口异常',
 				content: '服务器繁忙',
 				showCancel: false
 			})

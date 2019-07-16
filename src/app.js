@@ -5,7 +5,6 @@ import {Provider} from '@tarojs/redux'
 import Index from './pages/index'
 import configStore from './store'
 import {_login} from './api/login'
-
 import pageInit from './utils/pageInit'
 
 // import './api/fly'
@@ -24,63 +23,106 @@ class App extends Component {
             'pages/appIndex/index',
             'pages/authorize/index',
             'pages/index/index',
-            'pages/flightInfo/index',
             'pages/selectCity/index',
             'pages/register/index',
             'pages/login/index',
             'pages/msgLogin/index',
-            'pages/registerSuccess/index',
-            'pages/ticketInfo/index',
             'pages/orderList/index',
             'pages/myMsg/index',
-            'pages/reserveMsg/index',
-            'pages/selectReserve/index',
-            'pages/addPassenger/index',
-            'pages/paySuccess/index',
             'pages/orderDetail/index',
             'pages/passengers/index',
             'pages/personalData/index',
-            'pages/changePassword/index'
+            'pages/changePassword/index',
+            'pages/companyRegister/index',
+            
         ],
+        "permission": {
+          "scope.userLocation": {
+            "desc": "将获取您的位置信息"
+          }
+        },
+         
         window: {
             backgroundTextStyle: 'light',
             navigationBarBackgroundColor: '#fff',
             navigationBarTitleText: 'WeChat',
-            navigationBarTextStyle: 'black'
+            navigationBarTextStyle: 'black',
+            backgroundColor: "#ffffff",
         },
         tabBar: {
             borderStyle: "black",
-            selectedColor: "#000000",
+            selectedColor: "#ffd400",
             backgroundColor: "#ffffff",
             color: "#c7c7c7",
             list: [
               {
                 pagePath: "pages/index/index",
-                // selectedIconPath: "./common/image/tab/discover@highlight.png",
-                // iconPath: "./common/image/tab/discover.png",
+                selectedIconPath: "./common/image/home1.png",
+                iconPath: "./common/image/home.png",
                 text: "首页"
               },
               {
                 pagePath: "pages/orderList/index",
-                // selectedIconPath: "./common/image/tab/discover@highlight.png",
-                // iconPath: "./common/image/tab/discover.png",
+                selectedIconPath: "./common/image/order1.png",
+                iconPath: "./common/image/order.png",
                 text: "订单"
               },
               {
                 pagePath: "pages/myMsg/index",
-                // selectedIconPath: "./common/image/tab/my@highlight.png",
-                // iconPath: "./common/image/tab/my.png",
+                selectedIconPath: "./common/image/my1.png",
+                iconPath: "./common/image/my.png",
                 text: "我"
               }
             ]
-          }
+          },
+        subPackages: [{
+            root: 'pages/planeTicket',
+            pages: [
+                'pages/flightInfo/index',
+                'pages/ticketInfo/index',
+                'pages/reserveMsg/index',
+            ]
+        },{
+                root:'pages/admissionTicket',
+                pages:[
+                    'pages/ticketList/index',
+                    'pages/admissionDetail/index',
+                    'pages/reserveTicket/index',
+                    'pages/ticketOrderDetail/index',
+                ]
+          },{
+                root:'pages/touristRoutes',
+                pages:[
+                    'pages/reserveRoutes/index',
+                    'pages/routesDetail/index',
+                    'pages/routesList/index',
+                    'pages/routesOrderDetail/index',
+                    'pages/collection/index'
+                ]
+          },{
+                root:'pages/wellForm',
+                pages:[
+                    'pages/myWellForm/index',
+                    'pages/reserveWellForm/index',
+                    'pages/wellFormDetail/index'
+                ]
+          },{
+                root:'pages/visa',
+                pages:[
+                    'pages/index/index',
+                    'pages/selectCity/index',
+                    'pages/visaList/index',
+                    'pages/visaDetail/index',
+                    'pages/articleDetail/index',
+                    'pages/visaReserve/index',
+                    'pages/visaOrderDetail/index',
+                    
+                ]
+          }]
     };
     componentWillMount () {
-        console.log(123)
-        if(this.$router.params.path=='pages/register/index'){
-            Taro.setStorageSync('path',JSON.stringify(this.$router.params.path))
+        if(this.$router.params.query.type){
             Taro.setStorageSync('query',JSON.stringify(this.$router.params.query))
-            _login()
         }
     }
     componentDidMount() {
@@ -104,6 +146,7 @@ class App extends Component {
     
     // 在 App 类中的 render() 函数没有实际作用
     // 请勿修改此函数
+    
     render() {
         return (
             <Provider store={store}>

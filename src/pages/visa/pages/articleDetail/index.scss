@@ -1,0 +1,100 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.bannerBox {
+  position: relative;
+
+  .bannerImg {
+    width: 100%;
+  }
+
+  .biaoQian {
+    position: absolute;
+    left:  28px;
+    bottom:  36px;
+    display: flex;
+
+    .labelSpan {
+      padding: 0  32px;
+      line-height:  56px;
+      border:  2px solid white;
+      color: white;
+      font-size:  24px;
+      margin-right:  12px;
+      border-radius:  3px;
+    }
+  }
+}
+.keFu{
+        margin-right: 0.58rem;
+        img{
+            width: 0.44rem;
+            height: 0.38rem;
+            margin:0 auto;
+            margin-bottom: 0.14rem;
+        }
+        
+    }
+.articContent{
+  padding-top: 50px;
+  padding-bottom: 162px;
+  width: 96%;
+  margin: 0 auto;
+  .boxH1 {
+    font-size: 50px;
+    color: #b7b7b7;
+  }
+  .fuhao {
+    float: right;
+    font-size: 197px;
+    color: #f1f1f1;
+    height: 100px;
+  }
+}
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding:  20px 0;
+  @include bg_color($background-color-theme0);
+  border-top:  1px solid $border-Color1;
+  z-index: 300;
+
+  .box {
+    display: flex;
+
+  }
+
+  .keFu {
+    margin-right:  58px;
+    .footerIcon {
+      width:  44px;
+      height:  38px;
+      margin: 0 auto;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+  }
+
+  .footerP {
+    @include font-dpr($font20);
+    @include font_color($font-color-theme2);
+    text-align: center;
+  }
+  
+
+  .reserveBtn {
+    @include font_color($font-color-theme5);
+    @include font-dpr($font30);
+    height: 80px;
+    line-height:  80px;
+    text-align: center;
+    flex-grow: 1;
+    box-shadow: -1px 4px 10px 0px rgba(255, 163, 2,  39);
+    border-radius:  40px;
+    @include btn_yellow();
+  }
+
+
+}

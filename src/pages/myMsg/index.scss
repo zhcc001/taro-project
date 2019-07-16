@@ -19,9 +19,10 @@
       border-radius: 10px;
       position: relative;
       background: linear-gradient(to right,#FFD400,#FFB300);
+      margin-bottom: 30px;
       .info-img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         position: absolute;
         top: 34px;
         right: 34px;
@@ -83,6 +84,7 @@
           color: $font-color-theme2;
         }
       }
+      
     }
     .orderModel{
         box-shadow:4px -2px 40px 0px rgba(155,150,143,0.34);
@@ -93,12 +95,25 @@
         justify-content: space-around;
         margin: 30px 0;
         .orderItem{
-            Image{
-                width: 80px;
-                height: 80px;
-                margin: 0 auto;
-                margin-bottom: 10px;
-            }
+          .imgBox{
+            width: 54px;
+            height: 54px;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 10px;
+            .imgIcon{
+              position: absolute;
+              width: 60px;
+              height: 60px;
+              top:0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+           }
+           
+          }
+            
             .orderText{
                 font-size: 30px;
                 color: #373737;
@@ -107,11 +122,12 @@
         }
     }
     //entrance
-    .entrance {
+    .entrance,.otherBox {
         width: 100%;
         box-shadow:4px -2px 40px 0px rgba(155,150,143,0.34);
         border-radius: 8px;
         background: #ffffff;
+        margin-bottom: 20px;
       .liBox {
         width: 90%;
         height: 110px;
@@ -120,8 +136,8 @@
         border-bottom: 1px solid #F5F5F5;
         margin: 0 auto;
         .entrance-img {
-          width: 41px;
-          height: 41px;
+          width: 54px;
+          height: 54px;
           display: inline-block;
           vertical-align: middle;
           margin-right: 15px;
@@ -153,7 +169,7 @@
           margin-top: -27px;
           border-radius: 27px;
           border: 1px solid #ff5d51;
-          z-index: 999;
+          z-index: 9;
         }
         .uid {
           width: 3px;
@@ -165,7 +181,7 @@
           position: absolute;
           right: 140px;
           top: 50%;
-          z-index: 999;
+          z-index: 8;
           transform: translate(0, -50%);
         }
       }
@@ -179,10 +195,11 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 600px;
+    max-height: 800px;
     border-radius: 10px;
     padding: 20px 0;
     background: #ffffff;
+    overflow-y: scroll;
     
   .dialog-h1 {
     font-size: 38px;
@@ -245,5 +262,193 @@
       border-radius: 10px;
       margin-right: 20px;
     }
+  }
+}
+
+.midContent{
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+  .checkCabin{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid #F4F4F4;
+  .cabinText{
+      @include font_color($font-color-theme2);
+      @include font-dpr($font30);
+      line-height: 60px;
+  }
+  .checkBoxImg{
+      width:60px;
+      height:60px;
+      position:relative;
+      .checkBoxIcon{
+          position:absolute;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+          margin:auto;
+          width:40px;
+          height:40px;
+      }
+  }
+}
+.campanyBtn{
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.sun-center{
+  position: relative;
+  .at-avatar--circle{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+.dialogBox{
+   width: 88%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   height: 400px;
+   border-radius: 10px;
+   background: #ffffff;
+   padding: 20px 0;
+   .dialog-h1 {
+     font-size: 38px;
+     color: $font-color-theme2;
+     text-align: center;
+   }
+
+   .dialog-title {
+     font-size: $font42;
+     color: $font-color-theme3;
+     padding:100px 50px;
+     text-align: center;
+     font-weight: 600;
+   }
+
+   .dialog-form {
+     width: 94%;
+     margin: 0 auto;
+     margin-bottom: 50px;
+
+     input {
+       height: 90px;
+       border-radius: 10px;
+       border: solid 2px #d3d0d0;
+       line-height: 90px;
+       padding: 0 30px;
+       margin-top: 10px;
+       font-size: $font26;
+       color: $font-color-theme3;
+     }
+   }
+
+   img {
+     width: 130px;
+     height: 130px;
+     margin-bottom: 28px;
+   }
+
+   //btn
+   .dialog-btn {
+     width: 88%;
+     margin: 0 auto;
+
+     .submit-btn {
+       flex: 1;
+       height: 80px;
+       display: block;
+       line-height: 80px;
+       text-align: center;
+       background: linear-gradient(to right, #FFD400, #FFB300);
+       font-size: $font30;
+       color: $font-color-theme5;
+       border-radius: 10px;
+     }
+
+     .cancel-btn {
+       flex: 1;
+       height: 80px;
+       display: block;
+       line-height: 80px;
+       text-align: center;
+       background: #fff;
+       border: solid 2px #bfbebe;
+       font-size: $font30;
+       color: $font-color-theme4;
+       border-radius: 10px;
+       margin-right: 20px;
+     }
+   }
+}
+.shareContent{
+  width: 88%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 800px;
+  border-radius: 10px;
+  background: #ffffff;
+  .picBox{
+    position: absolute;
+    top:-60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 146px;
+    height: 146px;
+    .at-avatar--circle{
+      width: 134px;
+      height: 134px;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    
+  }
+  .textCodeBox{
+    padding-top: 120px;
+  }
+  .maskTitle{
+    font-size: 36px;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+  .maskFuTitle{
+    font-size: 28px;
+    color: #666666;
+    text-align: center;
+    margin: 40px auto;
+    display: block;
+
+  }
+  .codeImg{
+    display: block;
+    margin: 0 auto;
+    width: 470px;
+    height: 535px;
+    // height: 400px;
   }
 }

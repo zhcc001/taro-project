@@ -1,0 +1,433 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.admissionDetail{
+    padding-bottom: 120px;
+}
+.topImgBox{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    .proTopImg {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+     
+
+    }
+    .likeBox {
+      position: absolute;
+      padding: 10px;
+      top: 26px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+
+      .likeIcon {
+        width: 40px;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+    }
+    
+}
+.proMsgBox{
+    // width: 92%;
+    // height: 200px;
+    // margin: 0 auto;
+    // position: relative;
+    .topMsg {
+      position: relative;
+      margin-bottom:  20px;
+
+      .nulBox {
+        width: 100%;
+        @include bg_color($background-color-theme0);
+        border-radius:  14px  14px 0 0;
+        padding-bottom:  32px;
+        margin-top: - 50px;
+
+        .nameH2 {
+          @include font-dpr($font42);
+          @include font_color($font-color-theme2);
+          font-weight: bold;
+          margin-bottom:  24px;
+        }
+
+        .biaoQian {
+          display: flex;
+          margin-bottom:  36px;
+
+          .biaoQianSpan {
+            @include font-dpr($font20);
+            @include font_color($font-color-theme4);
+            border:  2px solid $border-Color4;
+            margin-right:  10px;
+            border-radius:  6px;
+            padding: 0  10px;
+            line-height:  34px;
+          }
+        }
+
+        .star {
+          display: flex;
+          margin-bottom:  26px;
+          .starSpan {
+            @include font-dpr($font20);
+            @include font_color($font-color-theme4);
+          }
+        }
+
+        .priceBox {
+          display: flex;
+          justify-content: space-between;
+
+          .leftText {
+            display: flex;
+          }
+
+          .leftB {
+            @include font-dpr($font42);
+            @include font_color($font-color-theme1);
+
+            display: flex;
+
+            .leftSpan {
+              @include font-dpr($font20);
+              @include font_color($font-color-theme4);
+              padding-top:  18px;
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+    
+}
+.otherMsgBox{
+    .titleBox{
+        .box{
+            display: flex;
+            justify-content: space-between;
+            .itemTitle{
+                font-size: 24px;
+                color: #545454;
+                padding: 10px 18px;
+                border-bottom: 2px solid transparent;
+            }
+            .itemTitleOn{
+                color: #ffb701;
+                border-bottom: 2px solid #ffb701;
+            }
+        }
+    }
+    .detailLiH3{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+}
+  .backBox {
+    position: fixed;
+    right: 6%;
+    bottom: 20%;
+    width: 120px;
+    height: 120px;
+  }
+
+  .backIconText {
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px 6px rgba(176, 176, 176, 0.22);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90px;
+    height: 90px;
+  }
+
+  .backIcon {
+    width: 42px;
+    height: 38px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 6px;
+  }
+
+  .backText {
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    padding-top: 10px;
+  }
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding:  20px 0;
+  @include bg_color($background-color-theme0);
+  border-top:  1px solid $border-Color1;
+  z-index: 300;
+
+  .box {
+    display: flex;
+
+  }
+
+  .keFu {
+    margin-right:  58px;
+    position: relative;
+    Button {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+    }
+
+    .footerIcon {
+      width:  44px;
+      height:  44px;
+      margin: 0 auto;
+      // margin-bottom:  8px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+  }
+
+  .footerP {
+    @include font-dpr($font20);
+    @include font_color($font-color-theme2);
+    text-align: center;
+  }
+
+  .like {
+    margin-right:  40px;
+
+    .footerIcon {
+      width:  44px;
+      height:  42px;
+      margin: 0 auto;
+      // margin-bottom:  12px;
+      display: block;
+      margin-bottom: 6px;
+
+    }
+  }
+
+  .reserveBtn {
+    @include font_color($font-color-theme5);
+    @include font-dpr($font30);
+    height: 80px;
+    line-height:  80px;
+    text-align: center;
+    flex-grow: 1;
+    box-shadow: -1px 4px 10px 0px rgba(255, 163, 2,  39);
+    border-radius:  40px;
+    @include btn_yellow();
+  }
+
+
+}
+.scrollview{
+    .box{
+        padding-top: 30px;
+    }
+}
+.wenZhangImg{
+    width: 100%;
+    margin: 0 auto;
+}
+.textContent{
+    font-size: 24px;
+    line-height: 30px;
+    
+}
+.tag-fixed {
+    width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #ffffff;
+}
+.iconBox {
+//   flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+.detailLiH3 {
+    @include font-dpr($font30);
+    @include font_color($font-color-theme2);
+    font-weight: bold;
+}
+// 签证详情模块
+.detailModel{
+    width: 100%;
+    @include bg_color($background-color-theme0);
+    margin-bottom:  20px;
+    .modelTitle{
+        padding:  20px 0  20px  28px;
+        border-bottom: 2px solid $border-Color1;
+        display: flex;
+        .line{
+            width:  6px;
+            height:  40px;
+            margin-right:  24px;
+             @include btn_yellow();
+             border-radius: 3px;
+        }
+        .detailLiH3{
+            line-height:  40px;
+        }
+
+    }
+    .detailUl {
+        padding-bottom:  32px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+        .detailLi {
+            margin-top:  50px;
+            width: 30%;
+            .detailLiP {
+                @include font-dpr($font20);
+                @include font_color($font-color-theme4);
+                text-align: center;
+                padding-bottom:  10px;
+            }
+            .detailLiH5 {
+                @include font-dpr($font26);
+                @include font_color($font-color-theme2);
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+.big_image_wrap {
+  width: 170px;
+  height: 140px;
+  border-radius: 24px;
+  padding-top: 20px;
+  // box-shadow: 0px 0px 18px 0px rgba(176, 176, 176, 0.47);
+  .imgBgCheck{
+    @include imgbg2();
+  }
+  .big_titleCheck{
+    color: #FFB400 !important;
+  }
+  .imgBg {
+    @include imgbg1();
+    width: 78px;
+    height:78px;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    Image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .big_title {
+    font-size: 26px;
+    color: #333333;
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+// 所需材料
+.caiLiaoBox {
+  // padding-top:  50px;
+  margin-bottom:  20px;
+  .caiLiaoLi {
+    margin-bottom:  50px;
+
+    .caiLiaoTitle {
+      display: flex;
+
+      Image {
+        width:  36px;
+        height:  36px;
+        margin-right:  14px;
+      }
+
+    }
+
+    .caiLiaoTxet {
+      @include bg_color($background-color-theme6);
+      padding:  32px 10px;
+      width: 94%;
+      margin: 0 auto;
+      margin-top:  20px;
+
+      .caiLiaoLiP {
+        @include font-dpr($font26);
+        @include font_color($font-color-theme3);
+        padding: 0  26px;
+        line-height:  30px;
+      }
+    }
+  }
+
+  .openBtn {
+    width: 226px;
+    border-radius:  40px;
+    border:  2px solid $border-Color2;
+    margin: 0 auto;
+    display: flex;
+
+    .openBtnBox {
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .openBtnSpan {
+      @include font-dpr($font30);
+      @include font_color($font-color-theme);
+      line-height: 76px;
+    }
+    .iconBox{
+      position: relative;
+      width: 30px;
+      Image {
+        width: 26px;
+        height: 26px;
+        margin-top: 20px;
+        margin-left: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;right: 0;bottom: 0;
+        margin: auto;
+      }
+
+      .imgDeg {
+        transform: rotateZ(180deg)
+      }
+    }
+    
+  }
+
+}

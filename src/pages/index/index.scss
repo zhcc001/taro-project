@@ -1,28 +1,40 @@
 @import '../../assets/css/mixin.scss';
 @import '../../assets/css/variable.scss';
+.topHeight {
+  height: 490px !important;
+}
 .top{
-    width: 90%;
+    width: 94%;
     margin: 0 auto;
     position: relative;
-    height:400px;
+    height:410px;
+    margin-bottom: 20px;
     .topBox{
         position:absolute;
         top:-100px;
         left: 0;
         right: 0;
         margin: auto;
-        background:rgba(255,255,255,1);
         box-shadow:4px -2px 40px 0px rgba(155,150,143,0.34);
         border-radius:10px;
-        padding-bottom:54px;
+        
+    }
+    .nullBox{
+        background:rgba(255, 255, 255, 1);
+        padding-top: 24px;
+        
     }
     .topSelect{
         display:flex;
-        padding:20px 0;
-        border-bottom:1px solid rgba(244,244,244,1);
+        // border-bottom:1px solid rgba(244,244,244,1);
         .checkCabin{
         margin:0 auto;
         display:flex;
+        padding:20px 0;
+        width: 50%;
+        justify-content: space-around;
+        background: #ffffff;  
+        border-radius:10px 10px 0px 0px;
         .cabinText{
             @include font_color($font-color-theme2);
             @include font-dpr($font28);
@@ -42,6 +54,13 @@
                 height:30px;
             }
         }
+        
+    }
+    .checkCabinOn{
+        background: rgba(0,0,0,0.6);
+        .cabinText{
+            color: #ffffff;
+        }
     }
     }
     .setOutCity{
@@ -49,9 +68,8 @@
         justify-content: space-between;
         position: relative;
         height: 80px;
-        width: 96%;
+        width: 90%;
         margin: 0 auto;
-        margin-top: 54px;
         .cityText{
             font-size:44px;
             font-family:PingFangSC-Medium;
@@ -62,6 +80,7 @@
         }
         .cityImg{
             position: absolute;
+            animation: rotatefresh 1s;
             width: 62px;
             height: 62px;
             top: 0;
@@ -70,11 +89,23 @@
             bottom: 0;
             margin: auto;
         }
+        .xuanZhuan:active{
+            /* 加上这个才可以连续点击 */
+            animation: none;  
+            background: '#eee';
+          }
+          @keyframes rotatefresh {
+            from { opacity:0.3 }
+            to {
+                opacity:1;
+                transition: all 0.6s;
+            }
+          }
     }
 }
 .selectiveCabin{
     height: 40px;
-    width: 96%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -186,19 +217,20 @@
 }
 .checkTime{
     height: 40px;
-    width: 96%;
+    width: 90%;
     margin: 0 auto;
-    margin-bottom:60px;
+    padding:40px 0 60px 0;
+
     .checkTimeText{
         font-size:32px;
         font-family:PingFangSC-Regular;
         font-weight:400;
-        color:rgba(200,200,200,1);
+        // color:rgba(200,200,200,1);
         line-height:40px;
     }
 }
 .box{
-    width:90%;
+    width:94%;
     margin:0 auto;
 }
 // 公司信息模块
@@ -228,13 +260,25 @@
 .vipService{
     width:92%;
     margin:0 auto;
-    padding-bottom:40px;
-    
+    margin-bottom: 20px;
     .big_image_wrap{
-        width:90%;
+        width:170px;
+        height: 140px;
+        border-radius: 24px;
+        padding-top: 20px;
+        box-shadow:0px 0px 18px 0px rgba(176, 176, 176, 0.47);
         .big_image{
-            width:100%;
-            height: 200px;
+            width:66px;
+            height: 66px;
+            display: block;
+            margin: 0 auto;
+            
+        }
+        .big_title{
+            font-size: 28px;
+            color: #333333;
+            text-align: center;
+            padding-top: 10px;
         }
     }
 }
@@ -330,3 +374,292 @@
         }
       }
     }
+
+    .riLiMask .flex__item--selected-tail .flex__item-container{
+        background: #ffb300 !important;
+      }
+
+      .big_image_wrap{
+        margin: 0 auto;
+          
+        .big_image{
+            width:100%;
+        }
+    }
+
+    .controller__arrow--right,.controller__arrow--left{
+        flex:0 0 50px;
+        height:50px;
+
+    }
+    .cityBox {
+      width: 30%;
+      height: 80px;
+      display: block;
+    }
+    .endCityBox{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .swiper_item{
+        padding-top: 10px;
+    }
+
+    .proData{
+        width: 100%;
+        margin: 0 auto;
+        .productUl{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .productLi{
+                margin-bottom: 50px;
+                width:330px;
+                .imgBox{
+                    width:328px;
+                    height:330px;
+                    position: relative;
+                    margin-bottom: 22px;
+                    .proImg{
+                        width:328px;
+                        height:330px;
+                        border-radius:12px;
+                    }
+                    .biaoQian{
+                        position: absolute;
+                        background:linear-gradient(90deg,  rgba(255, 144, 0, 1), rgba(255, 187, 0, 1));
+                        border-radius:12px 0px 12px 0px;
+                        top:0;
+                        left: 0;
+                        padding: 0 20px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 20px;
+                        color: #ffffff;
+                    }
+                    .dingwei{
+                        position: absolute;
+                        right:10px;
+                        bottom: 10px;
+                        .dingweiIcon{
+                            width: 30px;
+                            height:60px;
+                            margin-right: 10px;
+                            display: flex;
+                            Image{
+                               width: 18px;
+                               height: 22px;
+                               display: block;
+                            }
+                            
+                        }
+                        Text {
+                          font-size: 24px;
+                          color: #F7F7F7;
+                          display: block;
+                          line-height: 60px;
+                        }
+                    }
+                }
+                .proMsgBox{
+                    .otherBox{
+                        display: flex;
+                        margin-bottom: 10px;
+                    }
+                    .proTitle {
+                      font-size: 28px;
+                      color: #333333;
+                      font-weight: 600;
+                      margin-bottom: 4px;
+                    }
+
+                    .priceBox {
+                      margin-right: 20px;
+                      display: flex;
+
+                      .priceFuHao {
+                        font-size: 20px;
+                        color: #FC5656;
+                        padding-top: 12px;
+                      }
+
+                      .priceNum {
+                        font-size: 32px;
+                        color: #FC5656;
+                        margin:0 6px;
+                      }
+
+
+                    }
+
+                    .proTextBox {
+                      display: flex;
+                      padding-top: 12px;
+
+                      .score {
+                        font-size: 20px;
+                        color: #666666;
+                        margin-right: 10px;
+                      }
+                    }
+                }
+            }
+        }
+    }
+
+    .biaoQianLabel {
+      display: flex;
+      padding-top: 10px;
+
+      .labelText {
+        padding: 0 10px;
+        height: 34px;
+        line-height: 34px;
+        background: #F7F7F7;
+        border-radius: 4px;
+        font-size: 20px;
+        color: #9F9F9F;
+        margin-right: 14px;
+      }
+    }
+
+    .table {
+        width: 100%;
+        }
+        .tr {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .th,.td {
+          text-align: center;
+          color: #5C5C5C;
+          width: 140px;
+          padding: 20px 0;
+        }
+        .th {
+          font-size: 24px;
+        }
+        .td{
+          font-size: 22px;
+        }
+        .tdColor1{
+          color: #FFB400;
+        }
+        .tdColor2{
+          color: #FB5B4F;
+        }
+        .tdColor3{
+          color: #9B9B9B;
+        }
+
+.wellForm{
+    margin-bottom: 20px;
+    .downBox{
+        width: 100%;
+        border-bottom:1px dashed #F2F2F2;
+        .wellFormTitle{
+        color: #5E5E5E;
+        font-size: 34px;
+        width: 94%;
+        margin: 0 auto;
+        }
+        .applicant{
+            padding: 14px 0;
+            width: 94%;
+            margin: 0 auto;
+            Text{
+                font-size: 24px;
+                color: #C0C0C0;
+                margin-right: 20px;
+                
+            }
+            
+        }
+    }
+    .wellFormContent{
+        // width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        margin-left: 14px;
+        .CityLi{
+            display: flex;
+            width: 48%;
+            
+            .iconBox{
+                width: 60px;
+                height: 60px;
+                position: relative;
+                Image{
+                    width: 38px;
+                    height: 32px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+            .textNth1{
+                margin-right: 20px;
+            }
+            Text{
+                font-size: 24px;
+                color: #5E5E5E;
+                line-height: 60px;
+                
+                
+            }
+            
+        }
+        .riQiLi{
+            display: flex;
+            width: 48%;
+            .iconBox{
+                width: 60px;
+                height: 60px;
+                position: relative;
+                margin-right: 2px;
+                Image{
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+            .textNth1 {
+              margin-right: 20px;
+            }
+            Text{
+                font-size: 24px;
+                color: #5E5E5E;
+                line-height: 60px;
+                
+            }
+        }
+    }
+}
+.allBtn{
+    font-size: 26px;
+    color: #FFB501;
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+    padding: 26px 0;
+}
+.textNth2 {
+  width: 44%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

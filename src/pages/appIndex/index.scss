@@ -1,23 +1,82 @@
-.header {
-    text-align: center;
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.appIndexYi {
+    height: 100vh;
+    background:linear-gradient(90deg, $background-color-theme1, $background-color-theme);
+    .yiLvYunBox{
+        padding: 90px 0;
+        .yiLvYunText1,.yiLvYunText2{
+            font-size: 72px;
+            color: #ffffff;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .yiLvYunText1{
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .yiLvYunText2 {
+          text-align: right;
+        }
+        
+    }
+    .yiLvYun {
+      width: 562px;
+      height: 584px;
+      margin: 0 auto;
+      display: block;
+    }
 }
 
-
-
-.content {
-    margin-left: 50px;
-    margin-bottom: 90px;
-}
-
-.content text {
-    display: block;
-    color: #9d9d9d;
-    margin-top: 40px;
-}
-
-.bottom {
-    border-radius: 80px;
-    margin: 70px 50px;
-    font-size: 35px;
-    background: linear-gradient(to right,#FFD400,#FFB300);
+.appIndex{
+    height: 100vh;
+    background:linear-gradient(90deg, $background-color-theme1, $background-color-theme);
+    .logoBox{
+        padding: 140px 0;
+        .logoImg {
+          width: 369px;
+          height: 369px;
+          display: block;
+          margin: 0 auto;
+        }
+    }
+    .contentBox{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .content{
+        font-size: 44px;
+        color: #ffffff;
+        position: relative;
+        line-height: 84px;
+        height: 84px;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 20px ;
+        font-weight: 600;
+        .leftIcon{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 42px;
+            height: 41px;
+            display: block;
+        }
+        .rightIcon{
+             position: absolute;
+             bottom:0;
+             right: 0;
+             width: 42px;
+             height: 41px;
+             display: block;
+        }
+    }
+    .englishText{
+        font-size: 22px;
+        color: #ffffff;
+        padding-top: 20px;
+        text-align: center;
+    }
 }

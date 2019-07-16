@@ -2,7 +2,8 @@ import * as constants from '../constants/app'
 
 const INITIAL_STATE ={
 	//请求接口
-	baseURL : 'https://test-api.xinglu.com' ,
+	// baseURL: 'https://api.xinglu.com',//正式
+	baseURL: 'https://test-api.xinglu.com',//测试
 	//应用首次加载
 	appOnLaunch : true ,
 	//请求token

@@ -1,0 +1,176 @@
+@import '../../assets/css/mixin.scss';
+@import '../../assets/css/variable.scss';
+.systemName{
+    @include font_color($font-color-theme2);
+    @include font-dpr($font40);
+    padding-top:40px;
+    padding-bottom:10px;
+}
+.InvitationName{
+    @include font_color($font-color-theme11);
+    @include font-dpr($font30);
+}
+.formBox{
+    width: 98%;
+    margin: 0 auto;
+    padding-top:100px;
+    .li{
+        display:flex;
+        border: 1px solid #efefef;
+        border-radius:10px;
+        margin-bottom:20px;
+        height:88px;
+        
+    }
+    .liBox{
+        display:flex;
+        .code{
+            margin-left:10px;
+            border: 1px solid #efefef;
+            border-radius:10px;
+            height:88px;
+            @include font_color($font-color-theme11);
+            @include font-dpr($font30);
+            line-height:88px;
+            flex-grow:1;
+            text-align:center;
+        }
+    }
+    .imgBox{
+        width:66px;
+        position:relative;
+    }
+    .IconImg{
+           width:36px;
+           height:36px;
+           position:absolute;
+           top:0;
+           left:0;
+           right:0;
+           bottom:0;
+           margin:auto;
+        
+       }
+       .at-input{
+        height: 88px;
+        padding: 0;
+        margin: 0;
+        Input::placeholder{
+            color:#dbdbdb;
+            @include font-dpr($font30);
+        }
+        Input{
+            height: 88px !important;
+        padding: 0;
+        margin: 0;
+        line-height: normal;
+        @include font_color($font-color-theme2);
+        @include font-dpr($font30);
+        height:88px;
+        flex-grow:1;
+        border:none;
+        background:none;
+        }
+    }
+}
+.xieYi{
+    display:flex;
+    padding:20px 0;
+    .iconBox{
+        position: relative;
+        margin-right:20px;
+        width: 50px;
+        Image{
+            width:30px;
+            height:30px;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom: 0;
+            right:0;
+            margin: auto;
+        }
+    }
+    
+    Text{
+        @include font_color($font-color-theme2);
+        @include font-dpr($font36);
+    }
+}
+.btn{
+    display:block;
+    width: 98%;
+    margin: 0 auto;
+    height:88px;
+    // color:#949494;
+    @include font-dpr($font36);
+    // background:#cccccc;
+    border-radius:10px;
+    margin-top:40px;
+    text-align:center;
+    line-height:88px;
+    
+}
+.btnBg{
+    background-color: $background-color-theme;
+    color: #ffffff;
+}
+.goToBtnBox{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+    
+}
+.goToBtn{
+    @include font_color($font-color-theme);
+    @include font-dpr($font36);
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $font-color-theme;
+}
+
+.tickertMask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 50;
+  top: 0;
+  left: 0;
+}
+
+
+
+.registerMask{
+    width: 88%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    position: fixed;
+    padding: 30px 0;
+    z-index: 300;
+    .guanBiIcon {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .tipsText{
+        font-size: 36px;
+        color: #373737;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .goToBtnBox {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 30px;
+
+    }
+}

@@ -1,0 +1,376 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.top {
+  width: 100%;
+  @include bg_color($background-color-theme0);
+  padding:   28px 0;
+
+}
+.at-search-bar__action {
+  padding: 0 20px;
+  margin: 0;
+  box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+  @include font_color($font-color-theme5);
+  @include font-dpr($font30);
+  line-height: 72px;
+  height: 72px;
+  text-align: center;
+  border-radius: 10px;
+  @include btn_yellow();
+  margin-left: 10px;
+
+
+}
+.at-input{
+    padding: 0;
+    background: none;
+    margin-left: 0 !important;
+}
+.at-input__container{
+    height: 72px;
+}
+.at-search-bar__input {
+  padding: 0 74px;
+  height: 72px !important;
+}
+.topBox {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.address {
+  display: flex;
+  margin-right:   34px;
+}
+
+.downIcon {
+  width:   1px;
+  height:   6px;
+  margin-top:   34px;
+  margin-left:   1px;
+}
+
+.city {
+  font-size:   26px;
+  color: #2C2C2C;
+  line-height:   72px;
+}
+
+.search {
+  flex-grow: 1;
+  height:   72px;
+  display: flex;
+  background: #F2F2F2;
+  border-radius:   36px;
+}
+
+.souSuoBox {
+  height: 100%;
+  width:   60px;
+  position: relative;
+}
+
+.souSuo {
+  width:  30px;
+  height:   30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+.keyWord {
+  height: auto;
+  border: none;
+  outline: none;
+  font-size:   30px;
+  color: rgb(28, 28, 29);
+  background: none;
+}
+
+.keyWord::placeholder {
+  font-size:   30px;
+  color: #B9B9BC;
+}
+.swipeBox,.hotDestination,.selectArticle,.processingFlow{
+  width: 94%;
+  margin: 0 auto;
+  
+}
+.hotDestination,
+.selectArticle,
+.processingFlow {
+  padding-top: 40px;
+
+}
+.titleH2 {
+
+  @include font-dpr($font42);
+  color: #2C2C2C;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.bannerBox{
+    width: 94%;
+    margin: 0 auto;
+    .swiper_item {
+      .big_image_wrap {
+        margin: 0 auto;
+
+        .big_image {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+}
+.hotCountry {
+  width: 100%;
+  margin-bottom:  6px;
+  // @include bg_color($background-color-theme);
+  .hotCountryUl{
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       margin-left: 12px;
+    .hotCountryLi {
+      width:  220px;
+      height: 256px;
+      position: relative;
+      margin-bottom:  22px;
+      margin-right:  12px;
+      .countryImg {
+        width: 100%;
+        height: 256px;
+        border-radius: 10px;
+      }
+
+      .countryBox {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 3;
+      }
+
+      .line {
+        display: block;
+        width:  34px;
+        height:  6px;
+        border-radius: 4px;
+        @include bg_color($background-color-theme0);
+        margin: 0 auto;
+      }
+
+      .countryName,
+      .countryPrice {
+        text-align: center;
+        @include font_color($font-color-theme5);
+      }
+
+      .countryName {
+        @include font-dpr($font30);
+        padding:  12px 0;
+      }
+
+      .countryPrice {
+        @include font-dpr($font20);
+        margin-bottom:  24px;
+      }
+    }
+  } 
+
+  
+
+
+}
+.selectArticle {
+    .swiper_item{
+        height: 200px !important;
+        padding: 20px 0;
+        
+        
+    }
+}
+.service-desc {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  padding: 40px 0;
+  color: #fff;
+  width: 90%;
+}
+.artic0,.artic1,.artic2{
+     width: 92% !important;
+     height: 100%;
+     position: relative;
+     border-radius: 10px;
+     box-shadow:-4px 2px 38px 0px rgba(190, 53, 31, 0.2);
+}
+.artic0 {
+  @include artic_bg();
+  
+}
+
+.artic1 {
+  @include artic_bg1();
+}
+
+.artic2 {
+  @include artic_bg2();
+}
+.service-desc .service-title1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.service-desc .service-title2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.service-desc .service-line {
+  display: block;
+  background: #fff;
+  border-radius: 2px;
+  height: 4px;
+  width: 48px;
+}
+
+.processingFlow{
+    .processImg {
+      width: 100%;
+      margin-bottom:  70px;
+    }
+
+    .processImgUl {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .processImgLi {
+      width: 40%;
+    }
+
+    .processIcon {
+      margin: 0 auto;
+      width:  52px;
+      height:  52px;
+      display: block;
+    }
+
+    .sanjiaoLi {
+      width: 10% !important;
+    }
+
+    .sanjiaoIcon {
+      width:  14px;
+      height:  22px;
+      margin: 0 auto;
+      margin-top:  60px;
+      margin-left: 8px;
+    }
+
+    .processSpan {
+      @include font-dpr($font24);
+      color: #8D8D8D;
+      text-align: center;
+      padding-top:  26px;
+      line-height:  30px;
+    }
+}
+.visaList {
+  padding-bottom: 60px;
+  .visaList{
+    width: 100%;
+    @include bg_color($background-color-theme0);
+    padding-top: 30px;
+  }
+  .visaListUl{
+    width: 94%;
+    margin: 0 auto;
+  }
+  .visaListLi{
+    display: flex;
+    border-bottom: 1px solid rgba(247,247,247,1);
+    margin-bottom:  50px;
+    padding-bottom:  26px;
+  
+  }
+  .imgBox{
+      width: 250px;
+        margin-right: 36px;
+      
+  }
+  .leftImg{
+    width: 242px;
+    height: 180px;
+    border-radius: 10px;
+  }
+  .rightBox{
+    flex-grow: 1;
+  }
+  .nameH5 {
+    // font-size:  3px;
+    @include font-dpr($font30);
+    @include font_color($font-color-theme2);
+    font-weight: 600;
+    margin-bottom:  26px;
+  }
+  .textBox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:  14px;
+  }
+  .timeBox{
+    display: flex;
+    margin-bottom:  20px;
+  }
+  .jianNum{
+    color: #9F9F9F;
+    font-size:  24px;
+  }
+  .price{
+    font-size:  32px;
+    @include font_color($font-color-theme);
+  }
+  .shiJianIcon{
+    width:  24px;
+    height:  24px;
+    margin-right:  8px;
+  }
+  .timeBox span{
+    color: #9F9F9F;
+    font-size:  24px;
+  }
+  .biaoQian{
+    display: flex;
+  }
+  .biaoQianSpan {
+      padding: 0  12px;
+      background: #F7F7F7;
+      font-size:  20px;
+      color: #9F9F9F;
+      line-height:  34px;
+      margin-right: 10px;
+  }
+  .gotoMore{
+       width: 80%;
+       margin: 0 auto;
+       line-height: 85px;
+       border:1px solid $border-Color1;
+       @include font_color($font-color-theme4);
+       @include font-dpr($font30);
+       text-align: center;
+       border-radius:43px;
+  }
+}

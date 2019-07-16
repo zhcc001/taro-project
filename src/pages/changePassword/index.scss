@@ -35,12 +35,8 @@
         }
     }
     .imgBox{
-        width:36px;
+        width:66px;
         position:relative;
-        margin-left:20px;
-        margin-right:20px;
-
-        
     }
     .IconImg{
            width:36px;
@@ -53,17 +49,24 @@
            margin:auto;
         
        }
-    Input::placeholder{
-        color:#dbdbdb;
-        @include font-dpr($font36);
-    }
-    Input{
+       .at-input{
+        height: 88px;
+        padding: 0;
+        margin: 0;
+        Input::placeholder{
+            color:#dbdbdb;
+            @include font-dpr($font30);
+        }
+        Input{
+            height: 88px !important;
+        padding: 0;
+        margin: 0;
+        line-height: normal;
         @include font_color($font-color-theme2);
-        @include font-dpr($font36);
+        @include font-dpr($font30);
         height:88px;
         flex-grow:1;
-
-        
+        }
     }
 }
 .xieYi{
@@ -83,13 +86,17 @@
     display:block;
     width:100%;
     height:88px;
-    color:#949494;
+    // color:#949494;
     @include font-dpr($font36);
-    background:#cccccc;
+    // background:#cccccc;
     border-radius:10px;
     margin-top:40px;
     text-align:center;
     line-height:88px;
+}
+.btnBg{
+    background-color: $background-color-theme;
+    color: #ffffff;
 }
 .goToBtn{
     @include font_color($font-color-theme);
@@ -98,4 +105,11 @@
     padding-top: 100px;
     display: flex;
     justify-content: flex-end;
+    display: inline-block;
+    float: right;
+}
+.mobileText{
+    @include font_color($font-color-theme2);
+        @include font-dpr($font30);
+        line-height: 88px;
 }

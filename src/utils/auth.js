@@ -1,6 +1,7 @@
 import Taro from '@tarojs/taro'
 import md5 from 'js-md5'
 import { insertToken , changeAppOnLaunch } from '../actions/app'
+import {AppId,ApplianceId,AppSecret} from '../api/commonVariable'
 //获取数据
 export default class Auth {
 	//app授权
@@ -102,19 +103,22 @@ async function getAuthToken(){
 	const state = Taro.$store.getState();
 	//login
 	let res = await Taro.login();
-	const BASE_URL = 'https://test-api.xinglu.com'
+	let url = `${state.app.baseURL}/v1/authorize/token`
 	let TimeStamp = new Date().getTime()
-  	let AppSecret = md5(TimeStamp + 'b04ed0f02d9446c4b62851a80ad215b3')
-  	let url = `${BASE_URL}`+ '/v1/authorize/token'
-  	let AppId=10000
+	let AppSecretMd5 = md5(TimeStamp + AppSecret)
+	let PersonId = 0
+	  if(Taro.getStorageSync('loginData')){
+		PersonId=JSON.parse(Taro.getStorageSync('loginData')).Id
+	  }
 	//获取token
 	let response = await Taro.request({
 		url : `${url}` ,
 		data : {
 				AppId: AppId,
-      			AppSecret: AppSecret,
-			  	TimeStamp: TimeStamp,
-			  	ApplianceId:10004
+      			AppSecret: AppSecretMd5,
+				TimeStamp: TimeStamp,
+				PersonId:PersonId,
+			  	ApplianceId: ApplianceId
 		} ,
 		method : 'POST'
 	})

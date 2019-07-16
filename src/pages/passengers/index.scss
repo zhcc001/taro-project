@@ -2,6 +2,7 @@
 @import '../../assets/css/variable.scss';
 
 .is-has {
+  padding-bottom: 160px;
   .list {
     width: 100%;
     .cell {
@@ -10,6 +11,10 @@
       background: #fff;
       margin-top: 20px;
       border-bottom:1px solid #F5F5F5;
+      .leftBox{
+        flex-grow: 1;
+        display: flex;
+      }
     }
     .edit {
       width: 84px;
@@ -42,10 +47,16 @@
     .item-info {
       flex: 1;
       .top {
-        line-height: 32px;
-        font-size: $font32;
-        color: $font-color-theme2;
-        margin-bottom: 25px;
+        display: flex;
+        Text{
+          line-height: 32px;
+          font-size: $font32;
+          color: $font-color-theme2;
+          margin-bottom: 25px;
+          display: block;
+          
+        }
+        
       }
       .bot {
         line-height: 32px;
@@ -59,14 +70,14 @@
   width: 80%;
   height: 90px;
   display: block;
-  line-height: 90px;
+  line-height: 84px;
   text-align: center;
   background: linear-gradient(to right,#FFD400,#FFB300);
   font-size: 30px;
   color: $font-color-theme5;
   border-radius: 10px;
   position: fixed;
-  bottom: 100px;
+  bottom: 40px;
   left: 0;right: 0;
   margin: auto;
 }
@@ -78,21 +89,21 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 600px;
+    height:360px;
     border-radius: 10px;
-    padding: 20px 0;
+    padding: 40px 0;
     background: #ffffff;
     
   .dialog-h1 {
     font-size: 38px;
     color: $font-color-theme2;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
   }
   .dialog-title {
     font-size: $font42;
     color: $font-color-theme3;
-    padding: 100px;
+    padding: 10px 0 80px 0;
     text-align: center;
     font-weight: 600;
   }
@@ -143,6 +154,311 @@
       color: $font-color-theme4;
       border-radius: 10px;
       margin-right: 20px;
+    }
+  }
+}
+
+.addPassenger {
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  background: #F7F7F7;
+  position: absolute;
+  bottom: 0;
+  z-index: 400;
+  border-radius: 14px 14px 0 0;
+
+  .containter {
+    height: 60vh;
+    overflow-y: scroll;
+    padding: 120px 0;
+
+
+  }
+
+  .maskTitle {
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    font-size: 32px;
+    z-index: 450;
+    border-radius: 14px 14px 0 0;
+
+    .titleText {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .closeIcon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+
+
+  // 联系人信息
+  .contactsMaskMsg {
+    width: 94%;
+    margin: 0 auto;
+
+    .msgTitle {
+      display: flex;
+      width: 99%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      .line {
+        width: 6px;
+        height: 34px;
+        background: linear-gradient(129deg, rgba(243, 135, 83, 1), rgba(251, 91, 79, 1));
+        border-radius: 3px;
+        margin-right: 20px;
+      }
+
+      .msgH4 {
+        font-size: 32px;
+        color: #333333;
+        line-height: 34px;
+      }
+    }
+
+    .box {
+      width: 100%;
+      box-shadow: 1px 2px 24px 0px rgba(155, 150, 143, 0.15);
+      border-radius: 12px;
+      margin-bottom: 18px;
+      background: #ffffff;
+    }
+
+    .ulBox {
+      width: 94%;
+      margin: 0 auto;
+
+      .liBox {
+        display: flex;
+        height: 100px;
+        border-bottom: 1px solid $border-Color1;
+
+        .at-input {
+          background: none !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          position: inherit !important;
+        }
+
+        .at-input input {
+          border: none !important;
+          background: none !important;
+          height: 100px !important;
+          padding: 0 !important;
+          font-size: 30px;
+          margin: 0 auto !important;
+          color: #333333;
+        }
+
+        .at-input input::placeholder {
+          line-height: 100px !important;
+          color: #999999
+        }
+
+        .leftHText {
+          width: 34%;
+          height: 100px;
+          display: flex;
+
+          Text {
+            @include font-dpr($font30);
+            @include font_color($font-color-theme2);
+            line-height: 100px;
+            width: 60%;
+          }
+
+          .imgBox {
+            position: relative;
+            width: 30px;
+            height: 100px;
+
+            Image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              margin: auto;
+              width: 24px;
+              height: 14px;
+            }
+          }
+
+        }
+
+        .leftText {
+          width: 34%;
+          @include font-dpr($font30);
+          @include font_color($font-color-theme2);
+          line-height: 100px;
+          display: flex;
+        }
+
+
+      }
+
+      .liBox:last-child {
+        border: none;
+      }
+    }
+  }
+
+  .btnSure {
+    box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+    @include font_color($font-color-theme5);
+    @include font-dpr($font30);
+    position: absolute;
+    width: 90%;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 84px;
+    text-align: center;
+    border-radius: 10px;
+    @include btn_yellow();
+    z-index: 500;
+  }
+}
+
+// 证件类型
+.dialog-boxType {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 800px;
+  border-radius: 10px;
+  padding: 20px 0;
+  background: #ffffff;
+  overflow-y: scroll;
+
+  .dialog-h1 {
+    font-size: 38px;
+    color: #373737;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+}
+
+.midContent {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.checkCabin {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #F4F4F4;
+
+  .cabinText {
+    color: #373737;
+    @include font-dpr($font30);
+    line-height: 60px;
+  }
+
+  .checkBoxImg {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    .checkBoxIcon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.sexBox {
+  display: flex;
+  height: 100px;
+
+  .sexItem {
+    display: flex;
+    margin-right: 60px;
+
+    .sexImgBox {
+      position: relative;
+      width: 36px;
+      margin-right: 10px;
+
+      Image {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+      }
+    }
+
+    Text {
+      font-size: 32px;
+      color: #999999;
+      line-height: 100px;
+    }
+  }
+}
+
+.picker {
+  font-size: 30px;
+  color: #999999;
+  line-height: 100px;
+}
+
+.pickerVColor,
+.pickerBColor {
+  color: #333333;
+}
+
+.editData {
+  display: flex;
+  justify-content: space-between;
+
+  .tipsMsg {
+    color: #9F9F9F;
+    font-size: 26px;
+  }
+
+  .editImg {
+    position: relative;
+    width: 8%;
+
+    Image {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+
     }
   }
 }

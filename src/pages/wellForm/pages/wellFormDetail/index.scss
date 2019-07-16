@@ -1,0 +1,397 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.infoModel {
+  width: 94%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 3px 16px 0px rgba(176, 176, 176, 022);
+  border-radius: 10px;
+  padding: 30px 0;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  .line{
+    width:60px;
+    height:8px;
+    background:rgba(222, 221, 222, 1);
+    border-radius:3px;
+    margin: 30px;
+  }
+  .wellForm{
+    margin-bottom: 10px;
+    .downBox{
+        width: 100%;
+        // border-bottom:1px dashed #F2F2F2;
+        .wellFormTitle{
+          color: #5E5E5E;
+          font-size: 34px;
+          margin-left: 30px;
+          width: 94%;
+          }
+        .applicant{
+            font-size: 24px;
+            color: #C0C0C0;
+            margin-left: 30px;
+            padding: 14px 0;
+            
+        }
+    }
+    .wellFormContent{
+        width: 96%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        
+        
+    }
+}
+
+.allBtn{
+    font-size: 26px;
+    color: #FFB501;
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px 0;
+}
+}
+.CityLi {
+  display: flex;
+  width: 48%;
+
+  .iconBox {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    Image {
+      width: 38px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 80px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 60px;
+
+  }
+}
+
+.riQiLi {
+  display: flex;
+  width: 48%;
+
+  .iconBox {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    Image {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 80px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 60px;
+
+  }
+}
+
+.quCheng {
+  display: flex;
+  width: 100%;
+
+  .iconBox {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    Image {
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 80px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 60px;
+
+  }
+}
+
+.renYuan {
+  display: flex;
+  width: 100%;
+
+  .iconBox {
+    width: 60px;
+    height: 60px;
+    position: relative;
+
+    Image {
+      width: 36px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width:120px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 60px;
+
+  }
+}
+.container{
+        width: 94%;
+        margin: 0 auto;
+        // border:1px solid #FFF8DD;
+      }
+      .table {
+        width: 100%;
+        margin: 0 auto;
+        }
+        .tr {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .th,.td {
+          text-align: center;
+          color: #5C5C5C;
+          width: 140px;
+          padding: 20px 0;
+          border:1px solid #FFF8DD;
+          flex-grow: 1;
+        }
+        .th {
+          font-size: 24px;
+        }
+        .td{
+          font-size: 22px;
+        }
+        .th:nth-child(2),.td:nth-child(2){
+          border-left: none;
+          border-right:none;
+        }
+        .tdColor1{
+          color: #FFB400;
+        }
+        .tdColor2{
+          color: #FB5B4F;
+        }
+        .tdColor3{
+          color: #9B9B9B;
+        }
+  
+ .allTicket{
+      padding-top: 20px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  .modelTitle{
+    display: flex;
+    width: 94%;
+    margin: 0 auto;
+
+    .line{
+        width:6px;
+        height:33px;
+        background:linear-gradient(129deg,rgba(243,135,83,1),rgba(251,91,79,1));
+        border-radius:3px;
+        margin-right: 14px;
+    }
+    Text{
+        font-size:32px;
+        font-family:PingFangSC-Medium;
+        font-weight:500;
+        color:rgba(89,89,89,1);
+        line-height:32px;
+    }
+  }
+
+  .list{
+    padding-top: 27px;
+    .wellFormLi{
+      width: 90%;
+      box-shadow:0px 3px 16px 0px rgba(176, 176, 176, 0.44);
+      border-radius:10px;
+      margin-bottom: 20px;
+      padding:0 20px 20px 20px;
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      .tripMsg{
+        padding-top:46px;
+        position: relative;
+        .iconBox {
+          width: 50px;
+          height: 50px;
+        }
+        .textNth1 {
+          width: 140px;
+          text-align: center;
+        }
+        Text{
+          line-height: 50px;
+        }
+      }
+      .bianQian{
+        background:linear-gradient(-90deg, rgba(255, 211, 0, 1), rgba(255, 162, 0, 1));
+        border-radius:10px 0px 10px 0px;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        top:0;
+        left: 0;
+        color: #ffffff;
+        font-size: 20px;
+      }
+      .btnBox{
+        width: 120px;
+        position: absolute;
+        top: 0;
+        right: 14px;
+        bottom: 0;
+      .booking-btn {
+        width: 100px;
+        overflow: hidden;
+        position: absolute;
+        right: 18px;
+        top: 40px;
+        background: #fff;
+        border-style: solid;
+        border: 2px solid #f98755;
+        border-radius: 10px;
+        .btn {
+          font-size: $font28;
+          color: $font-color-theme5;
+          line-height: 70px;
+          height: 70px;
+          text-align: center;
+          background: linear-gradient(-90deg, 
+            #f45c4b 0%, 
+            #f98755 100%), 
+          linear-gradient(
+            #ff0000, 
+            #ff0000);
+          background-blend-mode: normal, 
+            normal;
+        }
+        .remain-num {
+          font-size: $font20;
+          color: #f5684e;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+        }
+      }
+      }
+    }
+  }
+
+
+  .backBox{
+  position: fixed;
+  right: 6%;
+  bottom: 20%;
+  width: 120px;
+  height: 120px;
+  z-index: 100;
+}
+.backIconText{
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:0px 0px 18px 6px rgba(176, 176, 176, 0.22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+}
+.backIcon{
+  width: 42px;
+  height: 38px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+}
+.backText{
+  font-size: 20px;
+  color: #333333;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  // padding-top: 12px;
+
+  Text {
+    // line-height: 40px !important;
+    margin-right: 6px;
+  }
+  .textBoxData:nth-child(1){
+    margin-top: 0;
+  }
+}
+.textBoxData{
+  margin-top: -10px;
+}
+.textNth2{
+  width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

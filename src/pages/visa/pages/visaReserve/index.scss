@@ -1,0 +1,976 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.swiper_item{
+    width: 76% !important;
+}
+.NullBg {
+  width: 100%;
+  height: 20px;
+  background: #F7F7F7;
+}
+.visaReserve{
+    padding-bottom: 200px;
+}
+  .backBox {
+    position: fixed;
+    right: 6%;
+    bottom: 20%;
+    width: 120px;
+    height: 120px;
+    z-index:100;
+  }
+
+  .backIconText {
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px 6px rgba(176, 176, 176, 0.22);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90px;
+    height: 90px;
+  }
+
+  .backIcon {
+    width: 42px;
+    height: 38px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 6px;
+  }
+
+  .backText {
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    padding-top: 10px;
+  }
+.nameH3{
+    @include font-dpr($font30);
+    @include font_color($font-color-theme2);
+    font-weight: bold;
+}
+.topModel,.reserveRen,.guarantee,.contactsMsg,.deliversMsg{
+    @include bg_color($background-color-theme0);
+   
+}
+// 顶部模块
+.topModel{
+    width: 100%;
+    // margin: 0 auto;
+    // box-shadow:1px 2px 14px 0px rgba(155,150,143, 15);
+    border-radius: 12px;
+    padding:  28px 0;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    .proImgBox{
+        width: 200px;
+        margin-right: 20px;
+        margin-left: 12px;
+    }
+    .proImg {
+        width: 190px;
+        height: 138px;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: block;
+    }
+    .rightText{
+        flex-grow: 1;
+        margin-right: 10px;
+        .nameH3 {
+            line-height:  40px;
+        }
+        .biaoQian{
+            display: flex;
+            padding-top:  16px;
+            .labelSpan {
+                padding: 0  12px;
+                background: #F7F7F7;
+                @include font-dpr($font20);
+                @include font_color($font-color-theme4);
+                line-height:  28px;
+                margin-right:  14px;
+            }
+        }
+    }
+}
+
+// 预订人信息
+.reserveRen{
+    width: 100%;
+    margin: 0 auto;
+    // box-shadow:1px 2px 14px 0px rgba(155,150,143, 15);
+    // border-radius: 12px;
+    padding-top:  34px;
+    padding-bottom:  34px;
+    margin-bottom:  18px;
+    .nameH3 {
+        margin-bottom:  30px;
+    }
+    .reserveRenUl {
+        width: 100%;
+        margin-bottom:  40px;
+        .reserveRenLi {
+            display: flex;
+            padding:  20px 0;
+            border-bottom:  1px solid $border-Color1;
+            display: flex;
+            justify-content: space-between;
+            .nameMsg {
+                display: flex;
+                padding-bottom:  10px;
+                .nameMsgB {
+                    @include font-dpr($font26);
+                    @include font_color($font-color-theme2); 
+                    font-weight: normal;
+                    margin-right:  20px;
+                    line-height: 30px;
+                }
+                .nameMsgI{
+                    @include font-dpr($font26);
+                    @include font_color($font-color-theme2); 
+                    line-height: 30px;
+                    
+                }
+            }
+            .postClass {
+                @include font-dpr($font24);
+                @include font_color($font-color-theme4); 
+            }
+            .delImg{
+                position: relative;
+                width:  40px;
+                right:0;
+                .delIcon {
+                    width:  30px;
+                    height:  30px;
+                    position: absolute;
+                    top: 0;bottom: 0;left: 0;right: 0;
+                    margin: auto;
+                }
+            }
+            
+            
+        }
+        
+    }
+    .shwoYudingRen{
+        margin: 0 auto;
+        width: 260px;
+        line-height:  70px;
+        border: 2px solid $border-Color2;
+        text-align: center;
+        @include font-dpr($font26);
+        @include font_color($font-color-theme);
+        border-radius: 35px;
+    }
+}
+
+// 联系人信息
+.contactsMsg,.deliversMsg{
+    width: 100%;
+    margin: 0 auto;
+    // box-shadow:1px 2px 14px 0px rgba(155,150,143, 15);
+    // border-radius: 12px;
+    padding-top:  34px;
+    margin-bottom:  20px;
+    
+    .contactsMsgUl {
+        width: 100%;
+        padding-top:  20px;
+        .contactsMsgLi {
+            display: flex;
+            height: 100px;
+            border-bottom:  1px solid $border-Color1;
+            .contactsMsgP {
+                width: 26%;
+                @include font-dpr($font26);
+                @include font_color($font-color-theme2); 
+                line-height: 100px;
+            }
+           .at-input {
+             height: 99px;
+             padding: 0;
+             margin: 0;
+
+             Input::placeholder {
+               color: #dbdbdb;
+               @include font-dpr($font24);
+               color: #999999;
+             }
+
+             Input {
+               height: 99px !important;
+               padding: 0;
+               margin: 0;
+               line-height: normal;
+               color: #333333;
+               @include font-dpr($font24);
+               height: 99px;
+               flex-grow: 1;
+               border: none;
+               background: none;
+             }
+           }
+        }
+        .contactsMsgLi:last-child {
+            border:none;
+        }
+    }
+}
+.bottomMask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+.detailShow {
+  bottom: 98px !important;
+}
+// 弹层
+// 订单弹层
+.orderMsgMask{
+    background: #ffffff;
+    height:80vh;
+    z-index: 1000;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+    z-index: 1001;
+    
+    .orderMsgMaskTitle {
+      margin: 0 auto;
+      padding: 28px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 10px;
+    }
+    .nameH4{
+        @include font-dpr($font36);
+        @include font_color($font-color-theme2);
+        font-weight: bold;
+        padding-top: 100px;
+        margin-bottom: 30px !important;
+        text-align: center;
+    }
+    .detailMsgBoxUl{
+        padding-bottom: 140px;
+        max-height: 60vh;
+        overflow-y: scroll;
+    }
+    .detailMsgBoxUl,.nameH4{
+        width: 94%;
+        margin: 0 auto;
+
+    }
+    .detailMsgBoxLi{
+        margin-bottom:  20px;
+    }
+    .itemTitle{
+        display: flex;
+        padding-bottom:  30px;
+        
+        .detailMsgBoxP{
+            @include font-dpr($font36);
+            @include font_color($font-color-theme2);
+            margin-right:  30px;
+            // font-weight: 600;
+        }
+        .detailMsgBoxI{
+            flex-grow: 1;
+            height:  2px;
+            @include bg_color($background-color-theme7);
+            margin-top:  24px;
+        }
+    }
+    .contentText{
+        // display: flex;
+        // justify-content: space-between;
+        .leftDetailMsg{
+            display: flex;
+            justify-content: space-between;
+            .detailMsgBoxSapn {
+              @include font-dpr($font26);
+              @include font_color($font-color-theme4);
+              padding-bottom: 20px;
+            }
+
+            .detailMsgBoxB {
+              @include font-dpr($font26);
+              @include font_color($font-color-theme1);
+              padding-bottom: 20px;
+            }
+        }
+        
+    }
+    
+}
+ .btn-Box {
+   position: absolute;
+   bottom: 20px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .add-btn,
+ .cancel-Btn {
+   padding: 0 100px;
+   height: 80px;
+   display: block;
+   line-height: 80px;
+   text-align: center;
+   font-size: $font30;
+   color: $font-color-theme5;
+   border-radius: 10px;
+   border: 1px solid transparent;
+ }
+
+ .add-btn {
+   background: linear-gradient(to right, #FFD400, #FFB300);
+ }
+
+ .cancel-Btn {
+   background: #F7F7F7;
+   color: #909090;
+ }
+
+.detailMsgBox{
+    position: fixed;
+    bottom:100px;
+    width: 100%;
+    @include bg_color($background-color-theme0);
+    border-radius: 14px  14px 0px 0px;
+    z-index: 100;
+    padding-bottom:  40px;
+    box-shadow:2px -5px 20px 0px rgba(188,188,188, 26);
+    .nameH4{
+        @include font-dpr($font36);
+        @include font_color($font-color-theme2);
+        font-weight: bold;
+        padding:  40px 0  70px 0;
+    }
+    .detailMsgBoxUl,.nameH4{
+        width: 94%;
+        margin: 0 auto;
+    }
+    .detailMsgBoxLi{
+        margin-bottom:  50px;
+    }
+    .itemTitle{
+        display: flex;
+        padding-bottom:  30px;
+        
+        .detailMsgBoxP{
+            @include font-dpr($font36);
+            @include font_color($font-color-theme2);
+            margin-right:  30px;
+            font-weight: 600;
+        }
+        .detailMsgBoxI{
+            flex-grow: 1;
+            height:  2px;
+            @include bg_color($background-color-theme7);
+            margin-top:  24px;
+        }
+    }
+    .contentText{
+        // display: flex;
+        // justify-content: space-between;
+        .leftDetailMsg{
+            display: flex;
+            justify-content: space-between;
+            .detailMsgBoxSapn {
+              @include font-dpr($font26);
+              @include font_color($font-color-theme4);
+              padding-bottom: 20px;
+              Text{
+                  @include font-dpr($font26);
+                  @include font_color($font-color-theme4);
+                  padding-bottom: 20px;
+              }
+            }
+
+            .detailMsgBoxB {
+              @include font-dpr($font26);
+              @include font_color($font-color-theme1);
+              padding-bottom: 20px;
+            }
+        }
+        
+    }
+    
+}
+// 底部
+.footer{
+    padding:  20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow:2px -5px 20px 0px rgba(188,188,188, 26);
+    @include bg_color($background-color-theme0);
+    z-index: 120;
+    .box{
+        display: flex;
+        justify-content: space-between;
+        .textMsg{
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            margin-right:  40px;
+            .rightFoot{
+                display: flex;
+            }
+            .priceB{
+                @include font-dpr($font46);
+                @include font_color($font-color-theme1); 
+                line-height:  60px;
+            }
+            .totalPriceSpan{
+                padding-left:  10px;
+            }
+            .totalPriceSpan,.mingXiI{
+                @include font-dpr($font24);
+                @include font_color($font-color-theme6); 
+            }
+            .mingXiI{
+                line-height:  80px;
+                margin-right:  10px;
+            }
+            .doenIcon {
+                width:  18px;
+                height:  10px;
+                margin-top:  38px;
+            }
+        
+        }
+        .showOrder {
+            box-shadow:-1px 4px 20px 0px rgba(255,163,2, 39);
+            @include font_color($font-color-theme5);
+            @include font-dpr($font30);
+            width: 230px;
+            line-height:  70px;
+            height: 70px;
+            text-align: center;
+            border-radius: 40px;
+            @include btn_yellow();
+            margin-top: 10px;
+            
+        }
+        
+    }
+}
+
+
+// 选择预订人弹层
+.selectReserve {
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  z-index: 300;
+
+  .maskTitle {
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    font-size: 32px;
+    border-bottom: 1px solid #f5f5f5;
+    z-index: 350;
+
+    .titleText {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .closeIcon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+
+  .passContent {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+
+    .passSearch {
+      width: 96%;
+      margin: 0 auto;
+      height: 80px;
+      @include bg_color($background-color-theme7);
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      padding: 4px 10px;
+
+      .btnSearch {
+        display: block;
+        width: 156px;
+        height: 80px;
+        border: none;
+        background: none;
+        text-align: center;
+        line-height: 80px;
+        @include font-dpr($font28);
+        @include font_color($font-color-theme5);
+        @include btn_yellow();
+        border-radius: 10px;
+      }
+
+      .at-input {
+        background: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: inherit !important;
+      }
+
+      .at-input input {
+        border: none !important;
+        background: none !important;
+        height: 80px !important;
+        padding: 0 !important;
+        font-size: 32px;
+        margin: 0 auto !important;
+        color: #333333;
+      }
+
+      .at-input input::placeholder {
+        line-height: 80px !important;
+        color: #999999
+      }
+    }
+
+  }
+
+  .ulBox {
+    width: 96%;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    padding-top: 80px;
+    height: 70vh;
+    overflow-y: scroll;
+
+    .liBox {
+      width: 100%;
+      margin-bottom: 20px;
+
+      .msgBox {
+        display: flex;
+        justify-content: space-between;
+
+        .leftBox {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 0;
+          flex-grow: 1;
+        }
+      }
+      
+      .leftImg {
+        width: 8%;
+
+        Image {
+          width: 36px;
+          height: 36px;
+          margin: 0 auto;
+        }
+      }
+
+      .midText {
+        flex-grow: 1;
+
+        .itemName {
+            display: flex;
+            Text{
+                 @include font-dpr($font30);
+                 @include font_color($font-color-theme2);
+                 padding-bottom: 24px;
+                 margin-right: 10px;
+            }
+         
+        }
+
+        .itemCard {
+          @include font-dpr($font26);
+          @include font_color($font-color-theme4);
+        }
+      }
+
+      .editImg {
+        position: relative;
+        width: 8%;
+
+        Image {
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 2px -5px 20px 0px rgba(188, 188, 188, 0.26);
+    @include bg_color($background-color-theme0);
+    z-index: 100;
+
+    .numSelect {
+      @include font-dpr($font24);
+      @include font_color($font-color-theme2);
+      line-height: 80px;
+    }
+
+    .sureSelect {
+      box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+      @include font_color($font-color-theme5);
+      @include font-dpr($font30);
+      width: 438px;
+      line-height: 80px;
+      text-align: center;
+      border-radius: 40px;
+      @include btn_yellow()
+    }
+  }
+
+  .addImg {
+    position: fixed;
+    bottom: 14%;
+    right: 3%;
+    width: 80px;
+    height: 80px;
+    z-index: 130;
+  }
+}
+
+.addPassenger {
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  background: #F7F7F7;
+  position: absolute;
+  bottom: 0;
+  z-index: 400;
+  border-radius: 14px 14px 0 0;
+  .containter{
+    height: 60vh;
+    overflow-y: scroll;
+    padding: 120px 0;
+    
+      
+  }
+  .maskTitle {
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+    font-size: 32px;
+    z-index: 450;
+    border-radius: 14px 14px 0 0;
+
+    .titleText {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .closeIcon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+
+
+  // 联系人信息
+  .contactsMaskMsg {
+    width: 94%;
+    margin: 0 auto;
+    
+    .msgTitle {
+      display: flex;
+      width: 99%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      .line {
+        width: 6px;
+        height: 34px;
+        background: linear-gradient(129deg, rgba(243, 135, 83, 1), rgba(251, 91, 79, 1));
+        border-radius: 3px;
+        margin-right: 20px;
+      }
+
+      .msgH4 {
+        font-size: 32px;
+        color: #333333;
+        line-height: 34px;
+      }
+    }
+    .box{
+        width: 100%;
+        box-shadow: 1px 2px 24px 0px rgba(155, 150, 143, 0.15);
+        border-radius: 12px;
+        margin-bottom: 18px;
+        background: #ffffff;
+    }
+
+    .ulBox {
+      width: 94%;
+      margin: 0 auto;
+
+      .liBox {
+        display: flex;
+        height: 100px;
+        border-bottom: 1px solid $border-Color1;
+        .at-input {
+          background: none !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          position: inherit !important;
+        }
+
+        .at-input input {
+          border: none !important;
+          background: none !important;
+          height:100px !important;
+          padding: 0 !important;
+          font-size: 30px;
+          margin: 0 auto !important;
+          color: #333333;
+        }
+
+        .at-input input::placeholder {
+          line-height:100px !important;
+          color: #999999
+        }
+        .leftHText{
+            width: 34%;
+            height: 100px;
+            display: flex;
+
+            Text{
+                 @include font-dpr($font30);
+                 @include font_color($font-color-theme2);
+                 line-height: 100px;
+                 width: 60%;
+            }
+            .imgBox{
+                position: relative;
+                width: 30px;
+                height: 100px;
+                Image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    width:24px;
+                    height:14px;
+                }
+            }
+            
+        }
+        .leftText {
+          width: 34%;
+          @include font-dpr($font30);
+          @include font_color($font-color-theme2);
+          line-height: 100px;
+          display: flex;
+        }
+
+        
+      }
+
+      .liBox:last-child {
+        border: none;
+      }
+    }
+  }
+
+  .btnSure {
+    box-shadow: -1px 4px 20px 0px rgba(255, 163, 2, 0.39);
+    @include font_color($font-color-theme5);
+    @include font-dpr($font30);
+    position: absolute;
+    width: 90%;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 84px;
+    text-align: center;
+    border-radius: 10px;
+    @include btn_yellow();
+    z-index: 500;
+  }
+}
+// 证件类型
+  .dialog-box {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 800px;
+    border-radius: 10px;
+    padding: 20px 0;
+    background: #ffffff;
+    overflow-y: scroll;
+
+    .dialog-h1 {
+      font-size: 38px;
+      color: #373737;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+  }
+
+  .midContent {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .checkCabin {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F4F4F4;
+
+    .cabinText {
+      color: #373737;
+      @include font-dpr($font30);
+      line-height: 60px;
+    }
+
+    .checkBoxImg {
+      width: 60px;
+      height: 60px;
+      position: relative;
+
+      .checkBoxIcon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .sexBox {
+    display: flex;
+    height: 100px;
+
+    .sexItem {
+      display: flex;
+      margin-right: 60px;
+
+      .sexImgBox {
+        position: relative;
+        width: 36px;
+        margin-right: 10px;
+        Image {
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          display: block;
+        }
+      }
+
+      Text {
+        font-size: 32px;
+        color: #999999;
+        line-height: 100px;
+      }
+    }
+  }
+  .picker{
+      font-size: 30px;
+      color: #999999;
+      line-height: 100px;
+  }
+  .pickerVColor,.pickerBColor{
+    color: #333333;
+  }
+  .editData {
+    display: flex;
+    justify-content: space-between;
+
+    .tipsMsg {
+      color: #9F9F9F;
+      font-size: 26px;
+    }
+
+    .editImg {
+      position: relative;
+      width: 8%;
+
+      Image {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+
+      }
+    }
+  }
+  .wuEdit{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }

@@ -1,0 +1,545 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.topSteps{
+    padding: 20px 0;
+    .at-steps__item--active .at-steps__circular {
+        background-color:$background-color-theme1 !important;
+    }
+    .at-steps__item--active .at-steps__title {
+        color: $background-color-theme1 !important;
+    }
+}
+.myWellForm{
+  padding-bottom: 30px;
+}
+.ListTitle{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    border-bottom:1px solid #F5F5F5;
+    .itemCabin{
+      Text{
+          display: block;
+          font-size:28px;
+          font-family:PingFangSC-Medium;
+          font-weight:500;
+          color:rgba(255,255,255,1);
+          padding: 30px 18px;
+          border-bottom:1px solid transparent;
+          color: #373737
+      }
+    }
+    .itemCabinOn{
+        Text{
+            border-bottom:1px solid #FFB924;
+            color: #FFB924;
+        }
+        
+    }
+}
+
+.OrderList{
+    margin: 0 auto;
+    padding-top: 30%;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    width: 94%;
+    
+  }
+  .OrderList .OrderList_item{
+    box-shadow: 0px 4px 4px 0px rgba(188,188,188,0.32);
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    box-shadow:4px -2px 20px 0px rgba(155,150,143,0.34);
+  }
+  .Number-Condition{
+    display: flex;
+    // justify-content: space-around;
+    height: 76px;
+    background: #fff;
+    font-size: 22px;
+    // text-align: center;
+    line-height: 76px;
+    padding: 0 21px;
+    box-sizing: border-box;
+    border-radius: 9px 9px 0 0;
+  }
+  .Number-Condition .number{
+     flex-grow: 21;
+     color: #818181;
+  }
+  .Number-Condition .condition{
+    flex-grow: 1;
+    color: $font-color-theme1;
+  }
+  .OrderMessage{
+    background: $background-color-theme7;
+    position: relative;
+    padding: 10px 24px 24px 4px;
+    display: flex;
+   .leftImg{
+      width:200px;
+      height: 140px;
+      margin-left: 16px;
+      margin-top: 10px;
+      .proImg{
+        width:170px;
+        height:126px;
+        border-radius:12px;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+   }
+   .rightBox{
+     flex-grow: 1;
+     padding-top: 10px;
+     padding-left: 10px;
+   }
+  }
+  .OrderMessage .smallmask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 76px;
+    background: $background-color-theme;
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 0 0 11px 0;
+  }
+  .OrderMessage .planePlace{
+    font-size: 24px;
+    color: #3a3a3a;
+    height: 48px;
+  }
+  .OrderMessage .planePlace .place{
+    margin-right: 16px;
+  }
+  .OrderMessage .planePlace .arrow{
+    width: 40px;
+    height: 10px;
+    margin: 10px 26px 0 26px;
+  }
+  .startData{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 44px;
+    line-height: 42px;
+    font-size: 22px;
+    color: #777777;
+  }
+  .startData .publicOrder_Date{
+    width: 28px;
+    height: 26px;
+    margin-right: 16px;
+    margin-top: 10px;
+    // vertical-align: middle;
+  }
+  .plane{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 22px;
+    color: #777777;
+    // height: .44px;
+  }
+  .plane .plane_img{
+    width: 36px;
+    height: 28px;
+    margin-right: 14px;
+    vertical-align: middle;
+  }  
+  .plane .plane_desc{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+  }
+
+  .Btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 16px 0 0;
+    margin-right: 20px;
+  }
+  
+  .Btn .payOrder{
+    border: 1px solid #feb0a6;
+    color: $font-color-theme1;
+    font-size: 24px;
+    width: 152px;
+    height: 52px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 8px;
+  }
+  .Btn .OneMoreOrder{
+    border: 1px solid #cfcfcf;
+    color: #9f9f9f;
+    margin-left: 16px;
+    width: 152px;
+    height: 52px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 8px;
+  }
+
+  .dragUpdataPage{height: 100vh;position: relative;overflow: hidden;
+    .downDragBox{
+        width: 100%;
+        top: 0px;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        position: absolute;
+    }
+    .upDragBox{
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        position: absolute;
+    }
+    .dragUpdata{height: 100%;width: 100%;position: absolute;}
+    .downText{margin-left: 20px;}
+  }
+.btnBox{
+  width: 96%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: flex-end;
+  .btn{
+    width:170px;
+    height:60px;
+    border-radius:30px;
+    font-size: 26px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    background:#F7F7F7;
+    color: #909090;
+    margin-left: 20px;
+  }
+  .yinGongBtn{
+    background:#FFB200;
+    color: #FFFFFF;
+    
+  }
+}
+.topBox{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 300;
+}
+.topSelectBox{
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  box-shadow:2px 4px 12px 0px rgba(188, 188, 188, 0.2);
+  .topSelect{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    .selectBox{
+      display: flex;
+      .statusText{
+        font-size: 28px;
+        color: #464646;
+        margin-right: 10px;
+      }
+      .statusTextOn {
+        color: #FFB508;
+      }
+      .sanjiaoBox {
+        width: 20px;
+        position: relative;
+        .snajiaoIcon{
+          width: 16px;
+          height: 10px;
+          position: absolute;
+          top:4px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+  
+}
+
+.orderMaskBox{
+    width: 100%;
+    background: #ffffff;
+    max-height: 60vh;
+    overflow-y: scroll;
+    z-index: 290;
+    border-top: 1px solid #cfcfcf;
+    .orderStatusUl{
+      width: 100%;
+      .orderStatusLi{
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        font-size: 28px;
+        color: #464646;
+      }
+      .orderStatusLiOn{
+        color: #FFB508;
+      }
+    }
+  }
+  .timePrice{
+    display: flex;
+    justify-content: space-between;
+    padding-top:30px;
+    .leftTime{
+      display: flex;
+      Image{
+        width:24px;
+        height:24px;
+        margin-top: 4px;
+        display: block;
+        margin-right: 4px;
+      }
+      Text{
+        font-size: 22px;
+        color: #777777;
+      }
+    }
+    .rightPrice{
+      font-size: 26px;
+      color: #373737;
+      line-height: 30px;
+    }
+  }
+  .nullBox{
+    margin-bottom: 28px;
+    margin-top: 20px;
+  }
+.line {
+  width: 60px;
+  height: 8px;
+  background: rgba(222, 221, 222, 1);
+  border-radius: 3px;
+  margin: 30px;
+}
+
+.wellForm {
+  margin-bottom: 10px;
+  box-shadow:4px -2px 20px 0px rgba(155, 150, 143, 0.34);
+  border-radius:10px;
+  width: 94%;
+  margin: 0 auto;
+  padding: 30px 0;
+  .btnDetail{
+    width: 94%;
+    margin: 0 auto;
+    border:1px solid #FFA800;
+    height: 66px;
+    line-height: 66px;
+    font-size: 26px;
+    color: #FFA800;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .downBox {
+    width: 100%;
+
+    // border-bottom:1px dashed #F2F2F2;
+    .wellFormTitle {
+      color: #5E5E5E;
+      font-size: 34px;
+      margin-left: 30px;
+      width: 94%;
+    }
+
+    .applicant {
+      font-size: 24px;
+      color: #C0C0C0;
+      margin-left: 30px;
+      padding: 14px 0;
+    }
+  }
+
+  .wellFormContent {
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    margin-bottom: 30px;
+
+
+  }
+}
+.CityLi {
+  display: flex;
+  width: 48%;
+
+  .iconBox {
+    width: 60px;
+    height: 80px;
+    position: relative;
+
+    Image {
+      width: 38px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 80px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 80px;
+
+  }
+}
+.textBox{
+  display: flex;
+  flex-direction: column;
+  // padding-top: 12px;
+  Text{
+    // line-height: 50px !important;
+    margin-right: 6px;
+  }
+  .textBoxData:nth-child(1) {
+    margin-top: 0;
+  }
+}
+.textBoxData {
+  margin-top: -20px;
+}
+.riQiLi {
+  display: flex;
+  width: 48%;
+
+  .iconBox {
+    width: 60px;
+    height: 80px;
+    position: relative;
+
+    Image {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 80px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 80px;
+
+  }
+}
+
+.quCheng {
+  display: flex;
+  width: 100%;
+
+  .iconBox {
+    width: 60px;
+    height: 80px;
+    position: relative;
+
+    Image {
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 80px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 80px;
+
+  }
+}
+
+.renYuan {
+  display: flex;
+  width: 100%;
+
+  .iconBox {
+    width: 60px;
+    height: 80px;
+    position: relative;
+
+    Image {
+      width: 36px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .textNth1 {
+    width: 120px;
+  }
+
+  Text {
+    font-size: 24px;
+    color: #5E5E5E;
+    line-height: 80px;
+
+  }
+}
+
+.textNth2 {
+  width: 44%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -17,11 +17,11 @@
     .itemCabin{
       Text{
           display: block;
-          font-size:24px;
+          font-size:28px;
           font-family:PingFangSC-Medium;
           font-weight:500;
           color:rgba(255,255,255,1);
-          padding: 30px 0;
+          padding: 30px 18px;
           border-bottom:1px solid transparent;
           color: #373737
       }
@@ -37,16 +37,19 @@
 
 .OrderList{
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 30%;
     padding-bottom: 20px;
     box-sizing: border-box;
+    width: 94%;
+    
   }
   .OrderList .OrderList_item{
     box-shadow: 0px 4px 4px 0px rgba(188,188,188,0.32);
     background: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
+    box-shadow:4px -2px 20px 0px rgba(155,150,143,0.34);
   }
   .Number-Condition{
     display: flex;
@@ -71,7 +74,29 @@
   .OrderMessage{
     background: $background-color-theme7;
     position: relative;
-    padding: 46px 24px 24px 24px;
+    padding: 10px 24px 24px 4px;
+    display: flex;
+   .leftImg{
+      width:200px;
+      height: 140px;
+      margin-left: 16px;
+      margin-top: 10px;
+      .proImg{
+        width:170px;
+        height:126px;
+        border-radius:12px;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+   }
+   .rightBox{
+     flex-grow: 1;
+     padding-top: 10px;
+     padding-left: 10px;
+   }
   }
   .OrderMessage .smallmask{
     position: absolute;
@@ -161,3 +186,284 @@
     line-height: 52px;
     border-radius: 8px;
   }
+
+  .dragUpdataPage{height: 100vh;position: relative;overflow: hidden;
+    .downDragBox{
+        width: 100%;
+        top: 0px;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        position: absolute;
+    }
+    .upDragBox{
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        position: absolute;
+    }
+    .dragUpdata{height: 100%;width: 100%;position: absolute;}
+    .downText{margin-left: 20px;}
+  }
+.btnBox{
+  width: 96%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: flex-end;
+  .btn{
+    width:170px;
+    height:60px;
+    border-radius:30px;
+    font-size: 26px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    background:#F7F7F7;
+    color: #909090;
+    margin-left: 20px;
+  }
+  .yinGongBtn{
+    background:#FFB200;
+    color: #FFFFFF;
+    
+  }
+}
+.topBox{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 300;
+}
+.topSelectBox{
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  box-shadow:2px 4px 12px 0px rgba(188, 188, 188, 0.2);
+  .topSelect{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    .selectBox{
+      display: flex;
+      .statusText{
+        font-size: 28px;
+        color: #464646;
+        margin-right: 10px;
+      }
+      .statusTextOn {
+        color: #FFB508;
+      }
+      .sanjiaoBox {
+        width: 20px;
+        position: relative;
+        .snajiaoIcon{
+          width: 16px;
+          height: 10px;
+          position: absolute;
+          top:4px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+  
+}
+
+.orderMaskBox{
+    width: 100%;
+    background: #ffffff;
+    max-height: 60vh;
+    overflow-y: scroll;
+    z-index: 290;
+    border-top: 1px solid #cfcfcf;
+    .orderStatusUl{
+      width: 100%;
+      .orderStatusLi{
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        font-size: 28px;
+        color: #464646;
+      }
+      .orderStatusLiOn{
+        color: #FFB508;
+      }
+    }
+  }
+  .timePrice{
+    display: flex;
+    justify-content: flex-end;
+    padding-top:30px;
+    .leftTime{
+      display: flex;
+      Image{
+        width:24px;
+        height:24px;
+        margin-top: 4px;
+        display: block;
+        margin-right: 4px;
+      }
+      Text{
+        font-size: 22px;
+        color: #777777;
+      }
+    }
+    .rightPrice{
+      font-size: 26px;
+      color: #373737;
+      line-height: 30px;
+    }
+  }
+.tickertMask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 500;
+  top: 0;
+  left: 0;
+}
+
+
+
+.registerMask {
+  width: 88%;
+  height: 460px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+//   padding: 30px 0;
+  z-index: 600;
+
+  .guanBiIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .tipsText {
+    font-size: 36px;
+    color: #373737;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .goToBtnBox {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+
+  }
+}
+
+.tipsBox{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    // padding-bottom: 60px;
+    // margin-top:60px;
+
+    .tipsMsg{
+        margin: 0 auto;
+        color: white;
+        @include font-dpr($font30);
+        width:60%;
+        display:block;
+        // margin-bottom: 20px;
+        // padding-top: 30px;
+    }
+    .btn{
+        width: 80%;
+        margin: 0 auto;        
+        display:block;
+        height:88px;
+        @include font-dpr($font36);
+        background:white;
+        border-radius:10px;
+        margin-top:40px;
+        text-align:center;
+        line-height:88px;
+    }
+    
+}
+
+.imgBox{
+        display: flex;
+        margin: 0 auto;
+        padding-top: 60px;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        // margin: auto;
+        // height: 180px;
+        Image{
+            width: 160px;
+            height: 160px;
+            margin-right:30px;
+            margin-left: 100px;
+        }
+        Text{
+            color: #FFB400;
+            @include font-dpr($font60);
+            line-height: 160px;
+        }
+    }
+    .orderMaskMsg{
+      padding-top: 20px;
+    }
+    .tipsNull {
+      display: flex;
+      justify-content: space-around;
+    }
+ .tipsMsg {
+   margin: 0 auto;
+   color: #373737;
+   @include font-dpr($font30);
+  //  width: 60%;
+   display: flex;
+   justify-content: space-around;
+   padding: 20px 0;
+   
+ }
+
+
+ .tipsTextBg {
+   width: 100%;
+   padding: 10px 0;
+   background: #FEF5DF;
+   margin-top: 30%;
+
+   Text {
+     display: block;
+     width: 96%;
+     margin: 0 auto;
+     font-size: 20px;
+     color: #5B5B5B;
+   }
+ }

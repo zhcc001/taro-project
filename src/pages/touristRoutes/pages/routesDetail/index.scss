@@ -1,0 +1,207 @@
+@import '../../../../assets/css/mixin.scss';
+@import '../../../../assets/css/variable.scss';
+.admissionDetail{
+    padding-bottom: 120px;
+}
+.topImgBox{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    .proTopImg {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+
+    }
+    .likeBox {
+      position: absolute;
+      padding: 10px;
+      top: 26px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+
+      .likeIcon {
+        width: 40px;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+    }
+    
+}
+.proMsgBox{
+    width: 92%;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    .nullBox{
+        width: 100%;
+        // padding: 30px 0;
+        background: #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        box-shadow:4px -2px 10px 10px rgba(155, 150, 143, 0.34);
+        .proName{
+        font-size: 28px;
+        font-weight: 600;
+        color: #545454;
+        margin-bottom: 10px;
+    }
+    .biaoqian{
+        display: flex;
+        margin-right: 10px;
+        .biaoQianSpan{
+            border: 1px solid #f1ca66;
+            font-size: 22px;
+            color: #f1ca66;
+            padding: 0 12px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        
+    }
+    .proCity{
+        font-size: 24px;
+        color: #545454;
+        padding: 20px 0;
+    }
+    .priceBox {
+            margin-right: 20px;
+            display: flex;
+            
+            .price{
+                margin-right: 10px;
+            }
+            .priceFuHao {
+              font-size: 20px;
+              color: #FC5656;
+              padding-top: 9px;
+            }
+
+            .priceNum {
+              font-size: 32px;
+              color: #FC5656;
+            }
+
+            
+          }
+    .saleNum{
+        font-size: 20px;
+        color: #a2a2a2;
+        padding-top: 16px;
+        margin-bottom: 20px;
+    }
+    }
+    
+}
+.otherMsgBox{
+    .titleBox{
+        .box{
+            display: flex;
+            justify-content: space-between;
+            .itemTitle{
+                font-size: 24px;
+                color: #545454;
+                padding: 10px 18px;
+                border-bottom: 2px solid transparent;
+            }
+            .itemTitleOn{
+                color: #ffb701;
+                border-bottom: 2px solid #ffb701;
+            }
+        }
+    }
+}
+.footer{
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 800;
+    .backHome{
+        margin-left: 30px;
+    }
+    .keFu {
+
+      position: relative;
+      Button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+      }
+    }
+    .backHome,.keFu{
+        padding-top: 10px;
+        .homeIcon,.keFuIcon{
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            display: block;
+            
+        }
+        .footerText{
+            font-size: 20px;
+            color: #61605f;
+            text-align: center;
+        }
+        
+    }
+    .buyBtn{
+        padding:0 140px;
+        font-size: 30px;
+        color: #ffffff;
+        line-height: 92px;
+        background:linear-gradient(90deg, rgba(255, 212, 0, 1), rgba(255, 179, 0, 1));
+    }
+}
+.scrollview{
+    .box{
+        padding-top: 30px;
+    }
+}
+.wenZhangImg{
+    width: 100%;
+    margin: 0 auto;
+}
+.textContent{
+    font-size: 24px;
+    line-height: 30px;
+    
+}
+.tag-fixed {
+    width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #ffffff;
+}
+.iconBox {
+//   flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30px;
+}

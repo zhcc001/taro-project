@@ -1,36 +1,45 @@
 import Taro from '@tarojs/taro'
 import request from '../utils/request'
+import {getOninfo,getPerson} from '../api/common'
 
 export function _login() {
   Taro.login({
     success: function (res) {
-      console.log(res,'eeeee')
       if (res.code) {
-       request(`/v1/exterior/person`,{code:res.code,from:"WeixinMiniProgram"},"POST")
+       request(`/v1/exterior/person`,{Code:res.code,From:"WeixinMiniProgram",AutoLogin: true},"POST")
           .then(resp => {
             if (resp.Success) {
+              // console.log(resp, '/v1/exterior/person')
               let res = resp.Result
+              Taro.setStorageSync('_openid', res.OpenId)
               if (res.Id < 1) {
                 //取userInfo
                 //未登录，未注册，存oppenid,userInfo
-                Taro.setStorageSync('_openid', res.OpenId)
                 // 查看是否授权
                 Taro.getSetting({
                   success: function (res) {
                     if (res.authSetting['scope.userInfo']) {
-                      ('已授权');
+                      // console.log('已授权')
+                      
                       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
                       Taro.getUserInfo({
                         success: function (res) {
-                          (res, '已授权获取信息');
-                          Taro.setStorageSync('_userInfo', res.userInfo)
-                          console.log(res,'判断ID')
-                          if(Taro.getStorageSync('path')&&Taro.getStorageSync('path')=='pages/register/index'){
-                              Taro.navigateTo({
-                              url: '/pages/register/index'
-                            })
+                          // Taro.setStorageSync('_userInfo', res.userInfo)
+                          if(Taro.getStorageSync('query')){
+                            console.log('register')
+                            let query=JSON.parse(Taro.getStorageSync('query')) 
+                            if(query.type=='register'){
+                              Taro.redirectTo({
+                                url: '/pages/register/index'
+                              })
+                            } else if (query.type == 'invite') {
+                              Taro.redirectTo({
+                                url: '/pages/companyRegister/index'
+                              })
+                            }
                           }else{
-                            Taro.navigateTo({
+                            console.log('login')
+                            Taro.redirectTo({
                               url: '/pages/login/index'
                             })
                           }
@@ -38,8 +47,9 @@ export function _login() {
                         }
                       })
                     } else {
-                     Taro.navigateTo({
-                              url: '/pages/authorize/index'
+                      // console.log('未授权')
+                     Taro.redirectTo({
+                        url: '/pages/authorize/index'
                       })
                      
                     }
@@ -47,10 +57,11 @@ export function _login() {
                 })
               } else {
                 //已注册,登录成功，存memberid
+                // console.log('已授权，Id>1')
+                Taro.setStorageSync('loginData',JSON.stringify(res))
                 Taro.switchTab({
                   url: '/pages/index/index'
                 })
-                // callback(res)
               }
             }
           })

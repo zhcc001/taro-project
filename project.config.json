@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "myApp",
 	"description": "测试",
-	"appid": "wx8b4e46ecc80e3c4e",
+	"appid": "wx2d9c9f242b52fcfd",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
@@ -37,9 +37,23 @@
 				{
 					"id": 0,
 					"name": "二维码进入注册",
-					"pathName": "pages/register/index",
-					"query": "VendorId=80000&companyName=黑龙江商旅",
+					"pathName": "pages/appIndex/index",
+					"query": "VendorId=80000&companyName=黑龙江商旅&type=register",
 					"scene": 1011
+				},
+				{
+					"id": 1,
+					"name": "二维码进入注册",
+					"pathName": "pages/appIndex/index",
+					"query": "staffId=104645&type=invite",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "二维码进入注册",
+					"pathName": "pages/appIndex/index",
+					"query": "ID=10020&type=share_ticket",
+					"scene": null
 				}
 			]
 		}
